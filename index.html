@@ -38,7 +38,7 @@
 
 <main class="shell">
 
-  <!-- Swap hero image filename here if needed -->
+  <!-- Hero -->
   <section class="hero" style="--hero:url('hero_home.jpg')">
     <div class="heroInner">
       <h1>ROCK OF THE MARNE</h1>
@@ -50,7 +50,7 @@
     </div>
   </section>
 
-  <!-- IMPORTANT: Cards start BELOW hero (no overlap) -->
+  <!-- Cards BELOW hero (no overlap) -->
   <section class="slab">
 
     <div class="feature3">
@@ -80,6 +80,7 @@
       <div class="statMini"><img src="ico_courses.svg" alt=""><div class="num">49</div><div class="lbl">Courses & Schools</div></div>
     </div>
 
+    <!-- Big 3rdinf-style block (News + Video) -->
     <div class="twoCol">
       <section class="newsBox">
         <div class="newsHead">Latest News</div>
@@ -93,11 +94,20 @@
         </ul>
       </section>
 
-      <section class="videoBox">
-        <div class="videoFrame">VIDEO PLACEHOLDER</div>
+      <section class="videoBox" aria-label="YouTube Video">
+        <div class="videoFrame">
+          <iframe
+            src="https://www.youtube.com/embed/CW_RSem3iu0?rel=0&modestbranding=1"
+            title="7-75th Ranger Regiment Video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
       </section>
     </div>
 
+    <!-- TeamSpeak stays at the bottom and stays the same size -->
     <div class="sponsor">
       <img class="sponsor-logo" src="teamspeak_logo.png" alt="TeamSpeak">
       <div class="socialRow">
