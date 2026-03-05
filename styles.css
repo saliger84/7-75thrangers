@@ -280,7 +280,7 @@ width:100%;
 .twoCol{
   margin-top:18px;
   display:grid;
-  grid-template-columns: 420px 1fr;
+  grid-template-columns: 460px 1fr;
   gap:16px;
 }
 .newsBox,.videoBox{
@@ -373,4 +373,7 @@ width:100%;
 display:block;
 margin:auto;
 opacity:.9;
+}
+.videoBox{
+margin-bottom:30px;
 }
