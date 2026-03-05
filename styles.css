@@ -250,7 +250,7 @@ body::before{
   margin:0 0 10px;
   font-weight:900;
   letter-spacing:.08em;
-  font-size:42px;
+  font-size:46px;
 }
 
 .hero p{
@@ -299,7 +299,7 @@ body::before{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
-  margin-top: -40px; /* pulls cards into hero fade like reference */
+  margin-top: -70px; /* pulls cards into hero fade like reference */
 }
 
 .card{
@@ -335,7 +335,7 @@ body::before{
   display:grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 14px;
-  margin: 16px 0 18px;
+  margin: 22px 0 26px;
   text-align:center;
 }
 
@@ -360,7 +360,7 @@ body::before{
 /* news + video */
 .grid2{
   display:grid;
-  grid-template-columns: 360px 1fr;
+  grid-template-columns: 420px 1fr;
   gap: 14px;
   align-items:stretch;
 }
