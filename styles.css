@@ -367,3 +367,10 @@ width:100%;
   .dropdown{display:none}
   .hero h1{font-size:36px}
 }
+.sponsor img{
+max-width:420px;
+width:100%;
+display:block;
+margin:auto;
+opacity:.9;
+}
