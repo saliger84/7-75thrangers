@@ -1,0 +1,7 @@
+
+body{margin:0;background:#0a0f14;color:#e7edf7;font-family:Arial}
+.topbar{background:#0b1117;padding:14px;color:white;display:flex;justify-content:space-between}
+.shell{display:grid;grid-template-columns:260px 1fr;max-width:1200px;margin:auto;gap:16px;padding:16px}
+.sidebar a{display:block;padding:10px;color:#e7edf7;text-decoration:none}
+.hero{background:url(hero_home.jpg) center/cover no-repeat;border-radius:10px;padding:30px}
+.panel{background:#111822;padding:16px;border-radius:10px;margin-top:16px}
