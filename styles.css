@@ -24,7 +24,7 @@
   --accent2:#ffb020;
 
   /* This is the big one: 3rdInf uses a centered "frame" with camo sides */
-  --frameW: 1500px;
+  --frameW: 1600px;
   --framePad: 18px;
 
   --shadow: 0 16px 40px rgba(0,0,0,.55);
