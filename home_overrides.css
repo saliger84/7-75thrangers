@@ -1,61 +1,215 @@
 
-/* Root-only add-on to make the HOME page match 3rdinf look */
+/* HOME sizing + hero background fix (ROOT-only) */
 :root{
-  --frameW: 1180px;
+  --frameW: 1280px;          /* make center frame closer to 3rdinf */
+  --framePad: 18px;
   --cardBg: rgba(60,60,60,.35);
   --cardBorder: rgba(255,255,255,.08);
 }
+
+/* reduce the heavy vignette that was making everything look "too dark" */
 body::after{
-  content:"";
-  position:fixed; inset:-40px;
-  pointer-events:none;
-  background:
-    radial-gradient(circle at 15% 20%, rgba(112,94,52,.45) 0 18%, transparent 19%),
-    radial-gradient(circle at 38% 40%, rgba(64,84,52,.45) 0 20%, transparent 21%),
-    radial-gradient(circle at 70% 35%, rgba(92,78,44,.40) 0 22%, transparent 23%),
-    radial-gradient(circle at 60% 70%, rgba(54,68,44,.40) 0 26%, transparent 27%),
-    radial-gradient(circle at 85% 80%, rgba(96,84,48,.35) 0 24%, transparent 25%),
-    url("noise.png") repeat,
-    url("grit.png") repeat;
-  opacity:.45;
-  mix-blend-mode:multiply;
-  filter: blur(.2px);
+  opacity:.18 !important;
 }
-.shell{max-width: var(--frameW); grid-template-columns:1fr; padding:0 0 40px}
-.sidebar{display:none}
-.hero{border-radius:0; border:0; min-height:420px; padding:0; overflow:hidden; position:relative; box-shadow:none}
+
+/* center frame, but let hero feel wide inside it */
+.shell{
+  max-width: var(--frameW);
+  margin: 0 auto;
+  padding: 0 var(--framePad) 44px;
+  grid-template-columns: 1fr;
+}
+
+/* hide sidebar on HOME */
+.sidebar{display:none !important;}
+
+/* IMPORTANT: ensure hero image actually renders */
+.hero{
+  border-radius:0;
+  border:0;
+  min-height: 430px;
+  padding:0;
+  overflow:hidden;
+  position:relative;
+  box-shadow:none;
+  background-image: var(--hero) !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* soften overlay so the image stays visible */
 .hero::before{
-  content:""; position:absolute; inset:0;
+  content:"";
+  position:absolute;
+  inset:0;
   background:
-    linear-gradient(90deg, rgba(0,0,0,.10), rgba(0,0,0,.45) 55%, rgba(0,0,0,.62)),
-    linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.74));
+    linear-gradient(90deg, rgba(0,0,0,.10), rgba(0,0,0,.36) 58%, rgba(0,0,0,.50)),
+    linear-gradient(180deg, rgba(0,0,0,.04), rgba(0,0,0,.56));
 }
-.heroInner{position:relative; width:100%; padding:86px 32px 72px}
-.hero h1{font-size:44px; letter-spacing:.02em; text-transform:uppercase; margin:0 0 8px}
-.hero p{font-size:18px; opacity:.9; max-width:70ch}
-.hero .cta .btn--primary{background: rgba(245,158,11,.95); border-color: rgba(245,158,11,.55); color:#1a1a1a;}
-.hero .cta .btn--ghost{border-color: rgba(255,255,255,.25); background: rgba(0,0,0,.20)}
-.slab{background: rgba(22,22,22,.92); border-top:1px solid rgba(255,255,255,.06); border-bottom:1px solid rgba(255,255,255,.06); padding:18px 18px 22px}
-.feature3{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
-.featureCard{background: var(--cardBg); border:1px solid var(--cardBorder); border-radius:2px; padding:18px 18px 16px; min-height:170px}
-.featureIcon{width:42px;height:42px;border-radius:8px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.12);background: rgba(0,0,0,.25);margin-bottom:10px}
-.featureIcon img{width:22px;height:22px;opacity:.95}
-.featureCard h3{margin:0 0 8px;font-size:20px;text-transform:uppercase;letter-spacing:.04em}
-.featureCard p{margin:0;color: rgba(255,255,255,.75);line-height:1.5;font-weight:600;font-size:13px}
-.statRow{margin-top:18px; display:grid; grid-template-columns:repeat(4,1fr); gap:8px; padding-top:10px}
-.statMini{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:14px 8px;border-radius:2px}
-.statMini img{width:24px;height:24px;opacity:.9}
-.statMini .num{font-size:20px;font-weight:950}
-.statMini .lbl{font-size:11px;opacity:.8;font-weight:800}
-.twoCol{margin-top:18px; display:grid; grid-template-columns:420px 1fr; gap:16px}
-.newsBox,.videoBox{background: rgba(0,0,0,.20); border:1px solid rgba(255,255,255,.08); border-radius:2px; overflow:hidden}
-.newsHead{background: rgba(85,90,120,.55); padding:10px 12px; font-weight:900}
-.newsList{list-style:none;margin:0;padding:0}
-.newsList li{padding:12px;border-top:1px solid rgba(255,255,255,.07);font-weight:700;font-size:13px;color: rgba(255,255,255,.85)}
-.videoInner{padding:12px}
-.videoFrame{width:100%;aspect-ratio:16/9;background:#000;border:1px solid rgba(255,255,255,.08);display:grid;place-items:center;color: rgba(255,255,255,.6);font-weight:800}
-.sponsor{margin-top:18px;display:grid;place-items:center;padding:18px 10px 8px;opacity:.9}
-.socialRow{margin-top:10px;display:flex;gap:18px;justify-content:center;padding-bottom:14px}
-.socialBtn{width:44px;height:44px;border-radius:999px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.12);background: rgba(0,0,0,.25);text-decoration:none;font-weight:900}
-.footer{max-width: var(--frameW); margin:0 auto; padding:16px 18px 28px; background: rgba(22,22,22,.92); border-top:1px solid rgba(255,255,255,.06)}
-@media (max-width:980px){.feature3{grid-template-columns:1fr}.twoCol{grid-template-columns:1fr}.heroInner{padding:70px 18px 56px}}
+
+.heroInner{
+  position:relative;
+  width:100%;
+  padding: 92px 34px 78px;
+}
+
+.hero h1{
+  font-size: 44px;
+  letter-spacing:.03em;
+  text-transform:uppercase;
+  margin:0 0 10px;
+}
+.hero p{
+  font-size: 18px;
+  opacity:.92;
+  max-width: 72ch;
+}
+
+.hero .cta{margin-top: 14px;}
+
+/* cards + stats area (match spacing) */
+.slab{
+  background: rgba(22,22,22,.92);
+  border-top:1px solid rgba(255,255,255,.06);
+  border-bottom:1px solid rgba(255,255,255,.06);
+  padding: 18px 18px 22px;
+}
+
+.feature3{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.featureCard{
+  background: var(--cardBg);
+  border:1px solid var(--cardBorder);
+  border-radius: 2px;
+  padding: 18px 18px 16px;
+  min-height: 176px;
+}
+
+.featureIcon{
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display:grid;
+  place-items:center;
+  border:1px solid rgba(255,255,255,.12);
+  background: rgba(0,0,0,.25);
+  margin-bottom: 10px;
+}
+
+.featureIcon img{width:22px;height:22px;opacity:.95;}
+
+.featureCard h3{
+  margin:0 0 8px;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing:.04em;
+}
+.featureCard p{
+  margin:0;
+  color: rgba(255,255,255,.76);
+  line-height:1.55;
+  font-weight: 650;
+  font-size: 13px;
+}
+
+/* stats row */
+.statRow{
+  margin-top: 18px;
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  padding-top: 10px;
+}
+
+.statMini{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap: 6px;
+  padding: 14px 8px;
+  border-radius: 2px;
+}
+.statMini img{width:24px;height:24px;opacity:.9;}
+.statMini .num{font-size: 20px;font-weight: 950;}
+.statMini .lbl{font-size: 11px;opacity:.85;font-weight: 850;}
+
+/* news + video */
+.twoCol{
+  margin-top: 18px;
+  display:grid;
+  grid-template-columns: 420px 1fr;
+  gap: 16px;
+}
+
+.newsBox,.videoBox{
+  background: rgba(0,0,0,.20);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius: 2px;
+  overflow:hidden;
+}
+
+.newsHead{
+  background: rgba(85,90,120,.55);
+  padding: 10px 12px;
+  font-weight: 900;
+}
+
+.newsList{list-style:none;margin:0;padding:0;}
+.newsList li{
+  padding: 12px;
+  border-top:1px solid rgba(255,255,255,.07);
+  font-weight: 750;
+  font-size: 13px;
+  color: rgba(255,255,255,.85);
+}
+
+.videoInner{padding:12px;}
+.videoFrame{
+  width:100%;
+  aspect-ratio: 16/9;
+  background:#000;
+  border:1px solid rgba(255,255,255,.08);
+  display:grid;
+  place-items:center;
+  color: rgba(255,255,255,.6);
+  font-weight: 800;
+}
+
+/* sponsor */
+.sponsor{
+  margin-top: 18px;
+  display:grid;
+  place-items:center;
+  padding: 18px 10px 8px;
+  opacity:.95;
+}
+
+.socialRow{
+  margin-top: 10px;
+  display:flex;
+  gap: 18px;
+  justify-content:center;
+  padding-bottom: 14px;
+}
+
+/* footer should align with frame */
+.footer{
+  max-width: var(--frameW);
+  margin: 0 auto;
+  padding: 16px 18px 28px;
+  background: rgba(22,22,22,.92);
+  border-top:1px solid rgba(255,255,255,.06);
+}
+
+/* responsive */
+@media (max-width: 1024px){
+  .feature3{grid-template-columns: 1fr;}
+  .twoCol{grid-template-columns: 1fr;}
+  .heroInner{padding: 72px 18px 56px;}
+}
