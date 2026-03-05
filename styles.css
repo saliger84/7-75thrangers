@@ -24,7 +24,7 @@
   --accent2:#ffb020;
 
   /* This is the big one: 3rdInf uses a centered "frame" with camo sides */
-  --frameW: 1600px;
+  --frameW: 1900px;
   --framePad: 18px;
 
   --shadow: 0 16px 40px rgba(0,0,0,.55);
@@ -218,7 +218,7 @@ body::before{
    ========================= */
 .hero{
   margin-top: 18px;
-  height: 520px;              /* matches reference feel */
+  height: 460px;              /* matches reference feel */
   position:relative;
   overflow:hidden;
   border: 0;
