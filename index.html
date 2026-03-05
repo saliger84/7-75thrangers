@@ -50,7 +50,7 @@
     </div>
   </section>
 
-  <!-- IMPORTANT: Cards start BELOW hero (no overlap) -->
+  <!-- Cards start BELOW hero (no overlap) -->
   <section class="slab">
 
     <div class="feature3">
@@ -80,6 +80,7 @@
       <div class="statMini"><img src="ico_courses.svg" alt=""><div class="num">49</div><div class="lbl">Courses & Schools</div></div>
     </div>
 
+    <!-- Latest News + YouTube (same height/shape) -->
     <div class="twoCol">
       <section class="newsBox">
         <div class="newsHead">Latest News</div>
@@ -93,31 +94,25 @@
         </ul>
       </section>
 
-      <section class="videoBox">
-        <div class="videoFrame">VIDEO PLACEHOLDER</div>
+      <section class="videoBox" aria-label="Unit video">
+        <iframe
+          class="videoFrame"
+          src="https://www.youtube.com/embed/CW_RSem3iu0"
+          title="7-75th Ranger Regiment"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
       </section>
     </div>
 
+    <!-- TeamSpeak stays at bottom -->
     <div class="sponsor">
       <img class="sponsor-logo" src="teamspeak_logo.png" alt="TeamSpeak">
-      <div class="sponsor-sub">Official Sponsor</div>
-
-      <div class="socialIcons" aria-label="Social links">
-        <a href="https://discord.com" title="Discord" aria-label="Discord">
-          <img src="icon_discord.png" alt="">
-        </a>
-        <a href="https://www.youtube.com" title="YouTube" aria-label="YouTube">
-          <img src="icon_youtube.png" alt="">
-        </a>
-        <a href="https://x.com" title="X" aria-label="X">
-          <img src="icon_twitch.png" alt="">
-        </a>
-        <a href="forum.html" title="Forum" aria-label="Forum">
-          <img src="icon_forum.png" alt="">
-        </a>
-        <a href="twitch.html" title="Twitch" aria-label="Twitch">
-          <img src="icon_twitch.png" alt="">
-        </a>
+      <div class="socialRow">
+        <a class="socialBtn" href="twitch.html" title="Twitch">T</a>
+        <a class="socialBtn" href="forum.html" title="Forum">F</a>
+        <a class="socialBtn" href="news.html" title="News">N</a>
+        <a class="socialBtn" href="calendar.html" title="Calendar">C</a>
       </div>
     </div>
 

@@ -1,28 +1,21 @@
-/* =========================================================
-   7-75th Ranger Regiment — 3rdID-style home layout (1:1 scale)
-   Drop-in replacement for styles.css
-   ========================================================= */
-
-/* Theme */
+/* Base */
 :root{
   --bg0:#0e1114;
   --bg1:#11161b;
-  --panel:#1f2429;
-  --panel2:#252b31;
-  --line:rgba(255,255,255,.10);
+  --panel:#1a1f24;
+  --panel2:#20262c;
+  --line:rgba(255,255,255,.08);
   --text:rgba(255,255,255,.92);
-  --muted:rgba(255,255,255,.72);
+  --muted:rgba(255,255,255,.70);
   --muted2:rgba(255,255,255,.56);
-
-  /* 3rdID-ish accent */
   --accent:#f59e0b;
 
-  /* 3rdID frame width */
-  --frameW:1760px;   /* increase if you want even wider */
-  --framePad:10px;
+  /* Frame sizing */
+  --frameW: 1560px;     /* wide main like 3rdid */
+  --framePad: 18px;
 
-  --radius: 3px;
-  --shadow: 0 16px 40px rgba(0,0,0,.55);
+  --radius: 6px;
+  --shadow: 0 10px 30px rgba(0,0,0,.45);
   --font: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
 }
 
@@ -30,462 +23,339 @@
 html,body{height:100%}
 body{
   margin:0;
-  font-family:var(--font);
+  font-family: var(--font);
   color:var(--text);
-
-  /* dark site base */
   background:
     radial-gradient(1200px 700px at 50% -10%, rgba(255,255,255,.06), transparent 60%),
     linear-gradient(180deg, var(--bg0), var(--bg1));
 }
 
-/* subtle camo side edges (lightweight) */
+/* subtle camo side feel */
 body::before{
   content:"";
-  position:fixed;
-  inset:0;
+  position:fixed; inset:0;
   pointer-events:none;
   background:
     radial-gradient(circle at 10% 20%, rgba(133,104,53,.40) 0 18%, transparent 19%),
     radial-gradient(circle at 30% 60%, rgba(63,92,62,.38) 0 22%, transparent 23%),
     radial-gradient(circle at 75% 30%, rgba(105,88,44,.34) 0 20%, transparent 21%),
     radial-gradient(circle at 85% 75%, rgba(70,92,58,.32) 0 26%, transparent 27%);
-  opacity:.12;
+  opacity:.22;
   mix-blend-mode:multiply;
 }
 
-/* =========================================================
-   Topbar (match 3rdID sizing)
-   ========================================================= */
+/* Topbar */
 .topbar{
   position:sticky;
   top:0;
   z-index:50;
   height:56px;
-  background: rgba(36,40,46,.90);
-  border-bottom:1px solid rgba(255,255,255,.08);
+  background: rgba(24,28,33,.92);
+  border-bottom:1px solid rgba(255,255,255,.06);
   backdrop-filter: blur(10px);
 }
-
 .topbar-inner{
-  height:56px;
-  max-width:var(--frameW);
+  max-width: var(--frameW);
   margin:0 auto;
-  padding:0 var(--framePad);
+  height:56px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:14px;
+  padding:0 var(--framePad);
 }
-
-/* brand */
 .brand{
   display:flex;
   align-items:center;
   gap:10px;
   text-decoration:none;
   color:var(--text);
-  min-width:220px;
 }
-.brand-mark{
-  width:20px;
-  height:20px;
-  display:block;
-}
+.brand-mark{ width:28px; height:28px; display:block; }
 .brand-text{
-  font-weight:800;
-  font-size:13px;
-  letter-spacing:.2px;
+  font-weight:900;
+  font-size:14px;
+  letter-spacing:.02em;
 }
 
-/* right nav */
+/* Nav */
 .nav{
   display:flex;
   align-items:center;
   gap:18px;
+  font-weight:800;
   font-size:12px;
-  font-weight:700;
-  letter-spacing:.2px;
 }
 .nav a{
   color:rgba(255,255,255,.86);
   text-decoration:none;
   padding:8px 6px;
-  border-radius:8px;
+  border-radius:6px;
 }
-.nav a:hover{color:#fff}
+.nav a:hover{color:white}
 
-/* MILHQ pill */
-.drop{position:relative}
+/* MILHQ dropdown pill */
+.drop{ position:relative; }
 .drop-btn{
   appearance:none;
   border:1px solid rgba(255,255,255,.14);
-  background: rgba(255,255,255,.06);
-  color:rgba(255,255,255,.90);
-  font-weight:800;
+  background: rgba(0,0,0,.20);
+  color:rgba(255,255,255,.88);
+  font-weight:900;
   font-size:12px;
-  letter-spacing:.2px;
-  padding:6px 10px;
-  border-radius:16px;
+  padding:7px 12px;
+  border-radius:999px;
   cursor:pointer;
 }
-.drop-btn:hover{background: rgba(255,255,255,.09)}
-.chev{opacity:.8; margin-left:4px}
-
 .drop-menu{
   position:absolute;
   right:0;
-  top: calc(100% + 10px);
-  min-width: 190px;
-  background: rgba(22,22,22,.98);
-  border: 1px solid rgba(255,255,255,.10);
-  border-radius: 10px;
+  top:44px;
+  min-width:180px;
+  background: rgba(18,22,26,.98);
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:10px;
+  overflow:hidden;
   box-shadow: var(--shadow);
-  padding: 8px;
   display:none;
 }
+.drop:hover .drop-menu{display:block}
 .drop-menu a{
   display:block;
-  padding: 9px 10px;
-  border-radius: 8px;
-  color:rgba(255,255,255,.86);
+  padding:12px 12px;
+  border-top:1px solid rgba(255,255,255,.06);
 }
+.drop-menu a:first-child{border-top:0}
 .drop-menu a:hover{background: rgba(255,255,255,.06)}
-.drop:hover .drop-menu{display:block}
 
-/* login pill */
+/* Login pill */
 .login-btn{
   border:1px solid rgba(255,255,255,.14);
-  background: rgba(255,255,255,.06);
-  padding:6px 10px !important;
-  border-radius:16px;
+  background: rgba(0,0,0,.20);
+  padding:7px 12px !important;
+  border-radius:999px;
 }
 
-.topbar-divider{
-  height:0;
-}
-
-/* =========================================================
-   Main frame
-   ========================================================= */
+/* Main frame */
 .shell{
-  max-width:var(--frameW);
+  max-width: var(--frameW);
   margin:0 auto;
-  padding:0 var(--framePad) 44px;
+  padding: 0 var(--framePad) 40px;
+  width:100%;
 }
 
-/* =========================================================
-   Hero (fix: too dark + correct padding)
-   ========================================================= */
+/* Hero */
 .hero{
-  margin-top:18px;
-  height:520px;                 /* match screenshot proportion */
-  position:relative;
+  margin-top: 18px;
+  min-height: 520px;
+  border-radius: 0;
   overflow:hidden;
+  position:relative;
   background-image: var(--hero);
   background-size: cover;
   background-position: center;
   background-repeat:no-repeat;
-  border:0;
-  border-radius:0;
 }
 
-/* Hero shading (lighter than before) */
-.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.06), rgba(0,0,0,.12) 45%, rgba(0,0,0,.22));}
-
-/* soft bottom fade like 3rdID */
-.hero::after{
+/* Hero shading (lighter so it isn't too dark) */
+.hero::before{
   content:"";
-  position:absolute;
-  left:0; right:0; bottom:0;
-  height:180px;
-  background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.60));
+  position:absolute; inset:0;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.05) 0%, rgba(0,0,0,.28) 55%, rgba(0,0,0,.45) 100%),
+    radial-gradient(900px 400px at 50% 35%, rgba(0,0,0,.18), transparent 60%);
   pointer-events:none;
 }
-
 .heroInner{
   position:absolute;
   left:50%;
-  top:50%;
-  transform: translate(-50%, -55%);
-  width:100%;
-  max-width: calc(var(--frameW) - (var(--framePad) * 2));
-  padding:0 120px;              /* centers text like 3rdID */
+  top:44%;
+  transform:translate(-50%,-50%);
   text-align:center;
+  width:min(880px, 92%);
   z-index:1;
 }
-
-.hero h1{
-  margin:0 0 10px;
-  font-size:48px;
+.heroInner h1{
+  margin:0 0 8px;
+  font-size:46px;
+  letter-spacing:.08em;
   font-weight:900;
-  letter-spacing:1px;
-  text-transform:uppercase;
-  text-shadow: 0 4px 16px rgba(0,0,0,.55);
+  text-shadow: 0 3px 18px rgba(0,0,0,.55);
 }
-.hero p{
-  margin:0 0 18px;
-  color:rgba(255,255,255,.86);
-  font-size:15px;
-  text-shadow: 0 3px 12px rgba(0,0,0,.45);
+.heroInner p{
+  margin:0 0 14px;
+  color:rgba(255,255,255,.88);
+  font-weight:700;
+  font-size:13px;
 }
-
-.cta{
-  display:flex;
-  gap:12px;
-  justify-content:center;
-  align-items:center;
-}
-
+.cta{ display:flex; gap:10px; justify-content:center; }
 .btn{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  height:32px;
+  height:34px;
   padding:0 14px;
   border-radius:4px;
-  font-weight:800;
+  font-weight:900;
   font-size:12px;
   text-decoration:none;
-  border:1px solid rgba(255,255,255,.16);
+  border:1px solid rgba(255,255,255,.14);
 }
 .btn--primary{
   background: var(--accent);
-  border-color: rgba(0,0,0,.25);
-  color:#141414;
+  color:#111;
+  border-color: rgba(0,0,0,.15);
 }
-.btn--primary:hover{filter:brightness(1.04)}
 .btn--ghost{
-  background: rgba(0,0,0,.28);
-  color:rgba(255,255,255,.90);
+  background: rgba(0,0,0,.30);
+  color:rgba(255,255,255,.92);
 }
-.btn--ghost:hover{background: rgba(255,255,255,.08)}
 
-/* =========================================================
-   Slab section (everything under hero)
-   ========================================================= */
+/* Slab background below hero */
 .slab{
-  background: rgba(40,44,50,.82);
-  border:1px solid rgba(255,255,255,.08);
-  box-shadow: 0 18px 60px rgba(0,0,0,.55);
-  margin-top:0;
+  background: rgba(32,38,44,.86);
+  border:1px solid rgba(255,255,255,.06);
+  border-top:0;
+  padding: 18px 18px 22px;
 }
 
-/* top spacing so cards are BELOW hero, not overlapping */
-.slab{
-  padding:18px;
-}
-
-/* 3 feature cards */
-
+/* Feature cards row */
 .feature3{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
-  gap:18px;
-  margin-top:0;
+  gap:14px;
+  margin-top: 14px;
 }
-
-/* 3rdID-style feature panels (tall, centered content) */
 .featureCard{
-  position:relative;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:flex-start;
-  text-align:center;
-
-  min-height:260px;
-  padding:18px 18px 16px;
-
+  background: rgba(255,255,255,.06);
   border:1px solid rgba(255,255,255,.08);
-  border-radius:4px;
-  box-shadow: 0 14px 34px rgba(0,0,0,.35);
-
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.06), rgba(0,0,0,.18)),
-    url("grit.png");
-  background-size:auto, 220px 220px;
-  background-repeat:no-repeat, repeat;
-  background-position:center, center;
+  border-radius: 4px;
+  padding: 14px 14px;
+  min-height: 86px;
 }
-
-.featureIcon{
-  position:static;
-  width:54px;
-  height:54px;
-  margin:6px auto 12px;
-  opacity:1;
-  filter: drop-shadow(0 4px 10px rgba(0,0,0,.45));
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-.featureIcon img{
-  width:54px;
-  height:54px;
-  object-fit:contain;
-}
-
+.featureIcon{ margin-bottom:8px; opacity:.95; }
+.featureIcon img{ width:18px; height:18px; display:block; }
 .featureCard h3{
-  margin:0 0 10px;
-  padding:0;
-  font-size:26px;
-  font-weight:300;
-  letter-spacing:.02em;
-  color:rgba(255,255,255,.90);
-  text-transform:uppercase;
+  margin:0 0 6px;
+  font-size:12px;
+  letter-spacing:.06em;
 }
-
 .featureCard p{
   margin:0;
-  max-width: 520px;
-  color:rgba(255,255,255,.70);
-  font-size:12px;
-  line-height:1.6;
+  font-size:11px;
+  line-height:1.35;
+  color:rgba(255,255,255,.76);
 }
 
-
+/* Stats row */
 .statRow{
   display:grid;
   grid-template-columns: repeat(4, 1fr);
-  gap:18px;
-  padding:34px 0 18px; /* match 3rdID stat band height */
+  gap: 10px;
+  margin: 14px 0 14px;
+  padding: 14px 0 6px;
 }
 .statMini{
   text-align:center;
+  color:rgba(255,255,255,.86);
 }
 .statMini img{
-  width:36px;
-  height:36px;
-  opacity:.96;
-  filter: drop-shadow(0 3px 10px rgba(0,0,0,.35));
+  width:22px;
+  height:22px;
+  display:block;
+  margin:0 auto 8px;
+  opacity:.95;
 }
-.statMini .num{
-  margin-top:10px;
-  font-weight:900;
-  font-size:22px;
-  line-height:1;
-  color:rgba(255,255,255,.92);
-}
-.statMini .lbl{
-  margin-top:6px;
-  font-size:12px;
-  color:rgba(255,255,255,.62);
-}
+.statMini .num{ font-weight:900; font-size:20px; line-height:1; }
+.statMini .lbl{ font-size:10px; color:rgba(255,255,255,.72); margin-top:4px; font-weight:800; }
 
-/* news + video */
+/* Latest News + Video row (same height/shape) */
 .twoCol{
   display:grid;
-  grid-template-columns: 0.95fr 1.85fr;
-  gap:18px;
-  margin-top:10px;
+  grid-template-columns: 1fr 1.45fr;
+  gap: 18px;
+  align-items: stretch;
+  margin-top: 6px;
 }
-
-.newsBox{
+.newsBox, .videoBox{
+  background: rgba(0,0,0,.18);
   border:1px solid rgba(255,255,255,.08);
-  background: rgba(22,25,29,.62);
+  border-radius: 4px;
+  overflow:hidden;
+  min-height: 320px; /* force same height */
 }
 .newsHead{
-  background: rgba(90,98,120,.40);
-  padding:10px 12px;
+  padding: 10px 12px;
+  background: rgba(90,100,130,.35);
+  border-bottom:1px solid rgba(255,255,255,.08);
   font-weight:900;
   font-size:12px;
 }
 .newsList{
   list-style:none;
-  padding:0;
   margin:0;
+  padding:0;
 }
 .newsList li{
-  padding:10px 12px;
-  border-top:1px solid rgba(255,255,255,.07);
+  padding: 12px 12px;
+  border-top:1px solid rgba(255,255,255,.06);
   font-size:11px;
   color:rgba(255,255,255,.82);
 }
-.newsList li:hover{background: rgba(255,255,255,.04); cursor:default}
+.newsList li:first-child{border-top:0}
 
-.videoBox{
-  border:1px solid rgba(255,255,255,.08);
-  background: rgba(22,25,29,.62);
-  padding:10px;
-}
+/* Video fills box */
+.videoBox{ position:relative; }
 .videoFrame{
-  height:340px;
-  border:1px solid rgba(255,255,255,.08);
-  background: #000;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:rgba(255,255,255,.35);
-  font-weight:900;
-  letter-spacing:.5px;
-  font-size:12px;
+  width:100%;
+  height:100%;
+  border:0;
+  display:block;
 }
 
-/* sponsor + socials */
+/* Sponsor (TeamSpeak at bottom) */
 .sponsor{
-  margin-top:18px;
-  padding:60px 0 54px;
+  margin-top: 18px;
+  padding: 18px 0 4px;
   text-align:center;
-  border-top:1px solid rgba(255,255,255,.06);
 }
-
-/* Keep TeamSpeak logo consistent (no layout-driven resizing) */
 .sponsor-logo{
   width:520px;
+  max-width:520px;
   height:auto;
-  display:inline-block;
   opacity:.95;
 }
-
-.sponsor-sub{
-  margin-top:10px;
-  font-size:12px;
-  font-weight:700;
-  color:rgba(255,255,255,.85);
-}
-
-.socialIcons{
-  margin-top:34px;
+.socialRow{
+  margin-top: 12px;
   display:flex;
+  gap:10px;
   justify-content:center;
-  align-items:center;
-  gap:52px;
 }
-.socialIcons a{
-  width:40px;
-  height:40px;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
+.socialBtn{
+  width:30px; height:30px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.14);
+  color:rgba(255,255,255,.86);
   text-decoration:none;
-  opacity:.92;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:900;
+  font-size:12px;
+  background: rgba(0,0,0,.20);
 }
-.socialIcons a:hover{opacity:1}
-.socialIcons img{
-  width:34px;
-  height:34px;
-  object-fit:contain;
-  filter: brightness(0) invert(1);
-  opacity:.95;
-}
+.socialBtn:hover{ color:white; }
 
-/* footer */
+/* Footer */
 .footer{
-  padding:16px 2px 0;
+  padding: 12px 0 0;
   color:rgba(255,255,255,.65);
   font-size:12px;
 }
 
-/* =========================================================
-   Responsive
-   ========================================================= */
-@media (max-width: 1100px){
-  .heroInner{padding:0 40px}
-  .feature3{grid-template-columns:1fr}
-  .statRow{grid-template-columns:repeat(2,1fr)}
-  .twoCol{grid-template-columns:1fr}
-  .videoFrame{height:260px}
+/* Responsive */
+@media (max-width: 980px){
+  .feature3{ grid-template-columns: 1fr; }
+  .twoCol{ grid-template-columns: 1fr; }
+  .heroInner h1{ font-size:36px; }
+  .statRow{ grid-template-columns: 1fr 1fr; }
 }
-
-/* Intentionally no responsive scaling for sponsor logo per request */
