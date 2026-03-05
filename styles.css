@@ -1,51 +1,49 @@
-/* ==========================================================
-   7-75th Rangers — 3rdinf-style base (ROOT-FOLDER FRIENDLY)
-   Fix: feature cards sit BELOW hero (no overlap)
-   ========================================================== */
+/* =========================================================
+   7-75th Ranger Regiment — 3rdID-style home layout (1:1 scale)
+   Drop-in replacement for styles.css
+   ========================================================= */
 
+/* Theme */
 :root{
   --bg0:#0e1114;
   --bg1:#11161b;
-
-  --top:#2d3237;
-  --top2:#262b30;
-
-  --panel:#2b3035;
-  --panel2:#24292e;
+  --panel:#1f2429;
+  --panel2:#252b31;
   --line:rgba(255,255,255,.10);
-
   --text:rgba(255,255,255,.92);
-  --muted:rgba(255,255,255,.70);
+  --muted:rgba(255,255,255,.72);
   --muted2:rgba(255,255,255,.56);
 
+  /* 3rdID-ish accent */
   --accent:#f59e0b;
 
-  /* 3rdinf page frame width */
-  --frameW:1500px;
-  --framePad:18px;
+  /* 3rdID frame width */
+  --frameW: 1560px;   /* increase if you want even wider */
+  --framePad: 18px;
 
-  --radius:2px;
-  --shadow:0 12px 30px rgba(0,0,0,.55);
-
+  --radius: 3px;
+  --shadow: 0 16px 40px rgba(0,0,0,.55);
   --font: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
 }
 
 *{box-sizing:border-box}
 html,body{height:100%}
-
 body{
   margin:0;
   font-family:var(--font);
   color:var(--text);
+
+  /* dark site base */
   background:
     radial-gradient(1200px 700px at 50% -10%, rgba(255,255,255,.06), transparent 60%),
     linear-gradient(180deg, var(--bg0), var(--bg1));
 }
 
-/* subtle camo-ish side vibe (keeps background alive) */
+/* subtle camo side edges (lightweight) */
 body::before{
   content:"";
-  position:fixed; inset:0;
+  position:fixed;
+  inset:0;
   pointer-events:none;
   background:
     radial-gradient(circle at 10% 20%, rgba(133,104,53,.40) 0 18%, transparent 19%),
@@ -56,30 +54,31 @@ body::before{
   mix-blend-mode:multiply;
 }
 
-/* =========================
-   Topbar
-   ========================= */
+/* =========================================================
+   Topbar (match 3rdID sizing)
+   ========================================================= */
 .topbar{
   position:sticky;
   top:0;
   z-index:50;
   height:56px;
-  background: linear-gradient(180deg, rgba(55,60,66,.92), rgba(40,45,51,.92));
+  background: rgba(36,40,46,.90);
   border-bottom:1px solid rgba(255,255,255,.08);
   backdrop-filter: blur(10px);
 }
 
 .topbar-inner{
-  height:100%;
+  height:56px;
   max-width:var(--frameW);
   margin:0 auto;
   padding:0 var(--framePad);
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:16px;
+  gap:14px;
 }
 
+/* brand */
 .brand{
   display:flex;
   align-items:center;
@@ -88,381 +87,375 @@ body::before{
   color:var(--text);
   min-width:220px;
 }
-
 .brand-mark{
-  width:28px;
-  height:28px;
+  width:20px;
+  height:20px;
   display:block;
 }
-
 .brand-text{
   font-weight:800;
   font-size:13px;
-  letter-spacing:.02em;
+  letter-spacing:.2px;
 }
 
+/* right nav */
 .nav{
   display:flex;
   align-items:center;
   gap:18px;
-  font-weight:700;
   font-size:12px;
+  font-weight:700;
+  letter-spacing:.2px;
 }
-
 .nav a{
   color:rgba(255,255,255,.86);
   text-decoration:none;
   padding:8px 6px;
-  border-radius:6px;
+  border-radius:8px;
 }
+.nav a:hover{color:#fff}
 
-.nav a:hover{ color:#fff; }
-
-.login-btn{
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.12);
-  border-radius: 16px;
-  padding: 6px 10px !important;
-}
-
-/* Dropdown */
-.drop{ position:relative; }
+/* MILHQ pill */
+.drop{position:relative}
 .drop-btn{
-  font: inherit;
-  color:rgba(255,255,255,.90);
+  appearance:none;
+  border:1px solid rgba(255,255,255,.14);
   background: rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:16px;
+  color:rgba(255,255,255,.90);
+  font-weight:800;
+  font-size:12px;
+  letter-spacing:.2px;
   padding:6px 10px;
+  border-radius:16px;
   cursor:pointer;
 }
-.drop-btn:hover{ background: rgba(255,255,255,.10); }
-.chev{ opacity:.8; margin-left:4px; }
+.drop-btn:hover{background: rgba(255,255,255,.09)}
+.chev{opacity:.8; margin-left:4px}
 
 .drop-menu{
   position:absolute;
   right:0;
   top: calc(100% + 10px);
-  min-width:190px;
-  background: rgba(25,28,32,.98);
-  border:1px solid rgba(255,255,255,.10);
-  border-radius:10px;
+  min-width: 190px;
+  background: rgba(22,22,22,.98);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 10px;
   box-shadow: var(--shadow);
-  padding:8px;
+  padding: 8px;
   display:none;
 }
-.drop:hover .drop-menu{ display:block; }
-
 .drop-menu a{
   display:block;
-  padding:10px 10px;
-  border-radius:8px;
-  color:rgba(255,255,255,.88);
+  padding: 9px 10px;
+  border-radius: 8px;
+  color:rgba(255,255,255,.86);
 }
-.drop-menu a:hover{ background: rgba(255,255,255,.06); }
+.drop-menu a:hover{background: rgba(255,255,255,.06)}
+.drop:hover .drop-menu{display:block}
 
-/* Thin divider line under topbar */
-.topbar-divider{
-  height:1px;
+/* login pill */
+.login-btn{
+  border:1px solid rgba(255,255,255,.14);
   background: rgba(255,255,255,.06);
+  padding:6px 10px !important;
+  border-radius:16px;
 }
 
-/* =========================
-   Page frame
-   ========================= */
+.topbar-divider{
+  height:0;
+}
+
+/* =========================================================
+   Main frame
+   ========================================================= */
 .shell{
   max-width:var(--frameW);
   margin:0 auto;
-  padding:0 var(--framePad) 40px;
-  width:100%;
+  padding:0 var(--framePad) 44px;
 }
 
-/* =========================
-   Hero (NO OVERLAP)
-   ========================= */
+/* =========================================================
+   Hero (fix: too dark + correct padding)
+   ========================================================= */
 .hero{
   margin-top:18px;
-  min-height:520px;
+  height:520px;                 /* match screenshot proportion */
   position:relative;
   overflow:hidden;
   background-image: var(--hero);
-  background-size:cover;
-  background-position:center;
+  background-size: cover;
+  background-position: center;
   background-repeat:no-repeat;
+  border:0;
   border-radius:0;
-  box-shadow: 0 0 0 1px rgba(255,255,255,.06) inset;
 }
 
-/* dark vignette like 3rdinf */
+/* Hero shading (lighter than before) */
 .hero::before{
   content:"";
   position:absolute;
   inset:0;
   background:
-    linear-gradient(
-      to bottom,
-      rgba(0,0,0,.15) 0%,
-      rgba(0,0,0,.05) 40%,
-      rgba(0,0,0,.25) 100%
-    );
+    linear-gradient(180deg,
+      rgba(0,0,0,.10) 0%,
+      rgba(0,0,0,.20) 35%,
+      rgba(0,0,0,.35) 100%);
+  pointer-events:none;
+}
+
+/* soft bottom fade like 3rdID */
+.hero::after{
+  content:"";
+  position:absolute;
+  left:0; right:0; bottom:0;
+  height:180px;
+  background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.60));
   pointer-events:none;
 }
 
 .heroInner{
-  position:relative;
-  height:100%;
-  max-width: 980px;
-  margin:0 auto;
-  padding: 150px 24px 56px; /* keeps text centered-ish like 3rdinf */
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -55%);
+  width:100%;
+  max-width: calc(var(--frameW) - (var(--framePad) * 2));
+  padding:0 120px;              /* centers text like 3rdID */
   text-align:center;
+  z-index:1;
 }
 
 .hero h1{
   margin:0 0 10px;
   font-size:48px;
-  letter-spacing:.06em;
   font-weight:900;
+  letter-spacing:1px;
   text-transform:uppercase;
-  text-shadow:0 2px 12px rgba(0,0,0,.45);
+  text-shadow: 0 4px 16px rgba(0,0,0,.55);
 }
-
 .hero p{
   margin:0 0 18px;
   color:rgba(255,255,255,.86);
-  font-weight:600;
-  text-shadow:0 2px 12px rgba(0,0,0,.45);
+  font-size:15px;
+  text-shadow: 0 3px 12px rgba(0,0,0,.45);
 }
 
 .cta{
   display:flex;
-  gap:10px;
+  gap:12px;
   justify-content:center;
-  flex-wrap:wrap;
+  align-items:center;
 }
 
-/* Buttons */
 .btn{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  gap:8px;
-  padding:10px 14px;
+  height:32px;
+  padding:0 14px;
   border-radius:4px;
   font-weight:800;
   font-size:12px;
   text-decoration:none;
   border:1px solid rgba(255,255,255,.16);
-  background: rgba(0,0,0,.20);
-  color: rgba(255,255,255,.90);
 }
-.btn:hover{ background: rgba(255,255,255,.06); }
-
 .btn--primary{
   background: var(--accent);
-  border-color: rgba(0,0,0,.15);
-  color:#111;
+  border-color: rgba(0,0,0,.25);
+  color:#141414;
 }
-.btn--primary:hover{ filter:brightness(1.03); }
-
+.btn--primary:hover{filter:brightness(1.04)}
 .btn--ghost{
-  background: rgba(0,0,0,.25);
+  background: rgba(0,0,0,.28);
+  color:rgba(255,255,255,.90);
 }
+.btn--ghost:hover{background: rgba(255,255,255,.08)}
 
-/* =========================
-   Content slab
-   ========================= */
+/* =========================================================
+   Slab section (everything under hero)
+   ========================================================= */
 .slab{
-  margin-top: 18px;          /* IMPORTANT: keeps features below hero */
-  background: rgba(35,39,44,.72);
-  border:1px solid rgba(255,255,255,.06);
-  box-shadow: var(--shadow);
-  padding: 18px 18px 24px;
+  background: rgba(40,44,50,.82);
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow: 0 18px 60px rgba(0,0,0,.55);
+  margin-top:0;
 }
 
-/* Feature cards row (below hero, NOT positioned) */
+/* top spacing so cards are BELOW hero, not overlapping */
+.slab{
+  padding:18px;
+}
+
+/* 3 feature cards */
 .feature3{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-  margin-top: 0;            /* no negative margins */
+  gap:18px;
+  margin-top:0;
 }
 
 .featureCard{
-  background: rgba(50,55,60,.78);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.06), rgba(0,0,0,.10)),
+    url("noise.png");
   border:1px solid rgba(255,255,255,.08);
-  padding: 18px 18px 16px;
-  min-height: 150px;
+  min-height:112px;
+  padding:18px 18px 16px;
   position:relative;
-  overflow:hidden;
-}
-
-/* faint texture */
-.featureCard::before{
-  content:"";
-  position:absolute; inset:0;
-  background-image: url("grit.png");
-  background-size: 320px 320px;
-  opacity:.10;
-  pointer-events:none;
 }
 
 .featureIcon{
-  width:32px;
-  height:32px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin-bottom:10px;
+  position:absolute;
+  left:14px;
+  top:12px;
+  width:24px;
+  height:24px;
   opacity:.95;
 }
-.featureIcon img{ width:22px; height:22px; }
+.featureIcon img{width:24px;height:24px;display:block}
 
 .featureCard h3{
   margin:0 0 8px;
-  letter-spacing:.04em;
+  padding-left:34px;
+  font-size:12px;
+  letter-spacing:.8px;
+  text-transform:uppercase;
   font-weight:900;
-  font-size:14px;
+  color:rgba(255,255,255,.92);
 }
-
 .featureCard p{
   margin:0;
-  color:rgba(255,255,255,.78);
-  font-size:12px;
-  line-height:1.35;
+  padding-left:34px;
+  font-size:11px;
+  line-height:1.45;
+  color:rgba(255,255,255,.70);
 }
 
-/* Stats row */
+/* stats row */
 .statRow{
   display:grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
-  margin-top: 14px;
-  padding-top: 14px;
-  border-top: 1px solid rgba(255,255,255,.08);
+  gap:18px;
+  padding:18px 0 6px;
 }
-
 .statMini{
   text-align:center;
-  padding: 10px 6px;
-  color: rgba(255,255,255,.88);
 }
 .statMini img{
-  width:22px; height:22px;
-  display:block;
-  margin:0 auto 8px;
+  width:22px;
+  height:22px;
   opacity:.92;
+  filter: drop-shadow(0 3px 10px rgba(0,0,0,.35));
 }
 .statMini .num{
-  font-size:20px;
+  margin-top:8px;
   font-weight:900;
-  line-height:1;
+  font-size:16px;
+  color:rgba(255,255,255,.92);
 }
 .statMini .lbl{
-  margin-top:4px;
-  font-size:11px;
-  color: rgba(255,255,255,.72);
-  font-weight:700;
+  margin-top:2px;
+  font-size:10px;
+  color:rgba(255,255,255,.60);
 }
 
-/* News + Video */
+/* news + video */
 .twoCol{
   display:grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 14px;
-  margin-top: 14px;
+  grid-template-columns: 0.95fr 1.85fr;
+  gap:18px;
+  margin-top:10px;
 }
 
 .newsBox{
   border:1px solid rgba(255,255,255,.08);
-  background: rgba(28,32,36,.72);
-  overflow:hidden;
+  background: rgba(22,25,29,.62);
 }
 .newsHead{
-  background: rgba(87,92,105,.55);
+  background: rgba(90,98,120,.40);
   padding:10px 12px;
   font-weight:900;
   font-size:12px;
 }
 .newsList{
   list-style:none;
-  margin:0;
   padding:0;
+  margin:0;
 }
 .newsList li{
   padding:10px 12px;
   border-top:1px solid rgba(255,255,255,.07);
-  font-size:12px;
-  color: rgba(255,255,255,.86);
+  font-size:11px;
+  color:rgba(255,255,255,.82);
 }
-.newsList li:hover{ background: rgba(255,255,255,.04); }
+.newsList li:hover{background: rgba(255,255,255,.04); cursor:default}
 
 .videoBox{
   border:1px solid rgba(255,255,255,.08);
-  background: rgba(28,32,36,.72);
-  padding: 10px;
+  background: rgba(22,25,29,.62);
+  padding:10px;
 }
 .videoFrame{
-  height: 290px;
+  height:340px;
+  border:1px solid rgba(255,255,255,.08);
+  background: #000;
   display:flex;
   align-items:center;
   justify-content:center;
-  background: rgba(0,0,0,.65);
-  border:1px solid rgba(255,255,255,.06);
-  color: rgba(255,255,255,.55);
+  color:rgba(255,255,255,.35);
   font-weight:900;
-  letter-spacing:.08em;
+  letter-spacing:.5px;
   font-size:12px;
 }
 
-/* Sponsor footer block */
+/* sponsor + socials */
 .sponsor{
-  margin-top: 18px;
+  padding:18px 0 8px;
   text-align:center;
-  padding-top: 16px;
-  border-top: 1px solid rgba(255,255,255,.08);
+}
+.sponsor img{
+  max-width:520px;
+  width:100%;
+  height:auto;
+  opacity:.95;
 }
 
 .socialRow{
-  margin-top: 10px;
+  margin-top:10px;
   display:flex;
-  gap: 10px;
   justify-content:center;
+  gap:10px;
 }
-
 .socialBtn{
-  width:34px; height:34px;
-  display:inline-flex;
+  width:34px;
+  height:34px;
+  border-radius:999px;
+  display:flex;
   align-items:center;
   justify-content:center;
-  border-radius:999px;
-  border:1px solid rgba(255,255,255,.12);
-  background: rgba(0,0,0,.25);
-  color: rgba(255,255,255,.85);
   text-decoration:none;
+  color:rgba(255,255,255,.85);
+  border:1px solid rgba(255,255,255,.14);
+  background: rgba(0,0,0,.25);
   font-weight:900;
   font-size:12px;
 }
-.socialBtn:hover{ background: rgba(255,255,255,.06); }
+.socialBtn:hover{background: rgba(255,255,255,.08); color:#fff}
 
-/* Page footer */
+/* footer */
 .footer{
-  margin-top: 14px;
-  color: rgba(255,255,255,.70);
+  padding:16px 2px 0;
+  color:rgba(255,255,255,.65);
   font-size:12px;
-  padding: 14px 0 0;
 }
 
-/* Responsive */
+/* =========================================================
+   Responsive
+   ========================================================= */
 @media (max-width: 1100px){
-  .feature3{ grid-template-columns: 1fr; }
-  .statRow{ grid-template-columns: 1fr 1fr; }
-  .twoCol{ grid-template-columns: 1fr; }
-  .heroInner{ padding-top: 120px; }
-}
-
-@media (max-width: 640px){
-  .hero h1{ font-size:34px; }
-  .topbar-inner{ padding:0 12px; }
-  .shell{ padding:0 12px 30px; }
-  .nav{ gap:12px; }
+  .heroInner{padding:0 40px}
+  .feature3{grid-template-columns:1fr}
+  .statRow{grid-template-columns:repeat(2,1fr)}
+  .twoCol{grid-template-columns:1fr}
+  .videoFrame{height:260px}
 }
