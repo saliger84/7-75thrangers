@@ -277,7 +277,6 @@ body::before{
 }
 
 /* 3 feature cards */
-
 .feature3{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
@@ -285,92 +284,69 @@ body::before{
   margin-top:0;
 }
 
-/* 3rdID-style feature panels (tall, centered content) */
 .featureCard{
-  position:relative;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:flex-start;
-  text-align:center;
-
-  min-height:260px;
-  padding:18px 18px 16px;
-
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:4px;
-  box-shadow: 0 14px 34px rgba(0,0,0,.35);
-
   background:
-    linear-gradient(180deg, rgba(255,255,255,.06), rgba(0,0,0,.18)),
-    url("grit.png");
-  background-size:auto, 220px 220px;
-  background-repeat:no-repeat, repeat;
-  background-position:center, center;
+    linear-gradient(180deg, rgba(255,255,255,.06), rgba(0,0,0,.10)),
+    url("noise.png");
+  border:1px solid rgba(255,255,255,.08);
+  min-height:112px;
+  padding:18px 18px 16px;
+  position:relative;
 }
 
 .featureIcon{
-  position:static;
-  width:54px;
-  height:54px;
-  margin:6px auto 12px;
-  opacity:1;
-  filter: drop-shadow(0 4px 10px rgba(0,0,0,.45));
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  position:absolute;
+  left:14px;
+  top:12px;
+  width:24px;
+  height:24px;
+  opacity:.95;
 }
-.featureIcon img{
-  width:54px;
-  height:54px;
-  object-fit:contain;
-}
+.featureIcon img{width:24px;height:24px;display:block}
 
 .featureCard h3{
-  margin:0 0 10px;
-  padding:0;
-  font-size:26px;
-  font-weight:300;
-  letter-spacing:.02em;
-  color:rgba(255,255,255,.90);
+  margin:0 0 8px;
+  padding-left:34px;
+  font-size:12px;
+  letter-spacing:.8px;
   text-transform:uppercase;
+  font-weight:900;
+  color:rgba(255,255,255,.92);
 }
-
 .featureCard p{
   margin:0;
-  max-width: 520px;
+  padding-left:34px;
+  font-size:11px;
+  line-height:1.45;
   color:rgba(255,255,255,.70);
-  font-size:12px;
-  line-height:1.6;
 }
 
-
+/* stats row */
 .statRow{
   display:grid;
   grid-template-columns: repeat(4, 1fr);
   gap:18px;
-  padding:34px 0 18px; /* match 3rdID stat band height */
+  padding:18px 0 6px;
 }
 .statMini{
   text-align:center;
 }
 .statMini img{
-  width:36px;
-  height:36px;
-  opacity:.96;
+  width:22px;
+  height:22px;
+  opacity:.92;
   filter: drop-shadow(0 3px 10px rgba(0,0,0,.35));
 }
 .statMini .num{
-  margin-top:10px;
+  margin-top:8px;
   font-weight:900;
-  font-size:22px;
-  line-height:1;
+  font-size:16px;
   color:rgba(255,255,255,.92);
 }
 .statMini .lbl{
-  margin-top:6px;
-  font-size:12px;
-  color:rgba(255,255,255,.62);
+  margin-top:2px;
+  font-size:10px;
+  color:rgba(255,255,255,.60);
 }
 
 /* news + video */
@@ -379,11 +355,17 @@ body::before{
   grid-template-columns: 0.95fr 1.85fr;
   gap:18px;
   margin-top:10px;
+  align-items:stretch;
 }
 
 .newsBox{
   border:1px solid rgba(255,255,255,.08);
   background: rgba(22,25,29,.62);
+  border-radius:4px;
+  overflow:hidden;
+  min-height:420px;
+  display:flex;
+  flex-direction:column;
 }
 .newsHead{
   background: rgba(90,98,120,.40);
@@ -395,6 +377,8 @@ body::before{
   list-style:none;
   padding:0;
   margin:0;
+  flex:1;
+  overflow:auto;
 }
 .newsList li{
   padding:10px 12px;
@@ -408,9 +392,14 @@ body::before{
   border:1px solid rgba(255,255,255,.08);
   background: rgba(22,25,29,.62);
   padding:10px;
+  border-radius:4px;
+  overflow:hidden;
+  min-height:420px;
+  display:flex;
 }
 .videoFrame{
-  height:340px;
+  flex:1;
+  min-height:0;
   border:1px solid rgba(255,255,255,.08);
   background: #000;
   display:flex;
@@ -424,51 +413,37 @@ body::before{
 
 /* sponsor + socials */
 .sponsor{
-  margin-top:18px;
-  padding:60px 0 54px;
+  padding:18px 0 8px;
   text-align:center;
-  border-top:1px solid rgba(255,255,255,.06);
 }
-
-/* Keep TeamSpeak logo consistent (no layout-driven resizing) */
-.sponsor-logo{
-  width:520px;
+.sponsor img{
+  max-width:520px;
+  width:100%;
   height:auto;
-  display:inline-block;
   opacity:.95;
 }
 
-.sponsor-sub{
+.socialRow{
   margin-top:10px;
-  font-size:12px;
-  font-weight:700;
-  color:rgba(255,255,255,.85);
-}
-
-.socialIcons{
-  margin-top:34px;
   display:flex;
   justify-content:center;
-  align-items:center;
-  gap:52px;
+  gap:10px;
 }
-.socialIcons a{
-  width:40px;
-  height:40px;
-  display:inline-flex;
+.socialBtn{
+  width:34px;
+  height:34px;
+  border-radius:999px;
+  display:flex;
   align-items:center;
   justify-content:center;
   text-decoration:none;
-  opacity:.92;
+  color:rgba(255,255,255,.85);
+  border:1px solid rgba(255,255,255,.14);
+  background: rgba(0,0,0,.25);
+  font-weight:900;
+  font-size:12px;
 }
-.socialIcons a:hover{opacity:1}
-.socialIcons img{
-  width:34px;
-  height:34px;
-  object-fit:contain;
-  filter: brightness(0) invert(1);
-  opacity:.95;
-}
+.socialBtn:hover{background: rgba(255,255,255,.08); color:#fff}
 
 /* footer */
 .footer{
@@ -487,5 +462,3 @@ body::before{
   .twoCol{grid-template-columns:1fr}
   .videoFrame{height:260px}
 }
-
-/* Intentionally no responsive scaling for sponsor logo per request */
