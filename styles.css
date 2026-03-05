@@ -424,38 +424,51 @@ body::before{
 
 /* sponsor + socials */
 .sponsor{
-  padding:18px 0 8px;
+  margin-top:18px;
+  padding:60px 0 54px;
   text-align:center;
+  border-top:1px solid rgba(255,255,255,.06);
 }
-.sponsor img{
-  width:520px;
-  max-width:520px;
 
+/* Keep TeamSpeak logo consistent (no layout-driven resizing) */
+.sponsor-logo{
+  width:520px;
   height:auto;
+  display:inline-block;
   opacity:.95;
 }
 
-.socialRow{
+.sponsor-sub{
   margin-top:10px;
+  font-size:12px;
+  font-weight:700;
+  color:rgba(255,255,255,.85);
+}
+
+.socialIcons{
+  margin-top:34px;
   display:flex;
   justify-content:center;
-  gap:10px;
+  align-items:center;
+  gap:52px;
 }
-.socialBtn{
-  width:34px;
-  height:34px;
-  border-radius:999px;
-  display:flex;
+.socialIcons a{
+  width:40px;
+  height:40px;
+  display:inline-flex;
   align-items:center;
   justify-content:center;
   text-decoration:none;
-  color:rgba(255,255,255,.85);
-  border:1px solid rgba(255,255,255,.14);
-  background: rgba(0,0,0,.25);
-  font-weight:900;
-  font-size:12px;
+  opacity:.92;
 }
-.socialBtn:hover{background: rgba(255,255,255,.08); color:#fff}
+.socialIcons a:hover{opacity:1}
+.socialIcons img{
+  width:34px;
+  height:34px;
+  object-fit:contain;
+  filter: brightness(0) invert(1);
+  opacity:.95;
+}
 
 /* footer */
 .footer{
@@ -475,6 +488,4 @@ body::before{
   .videoFrame{height:260px}
 }
 
-@media (max-width: 560px){
-  .sponsor img{width:100%; max-width:520px;}
-}
+/* Intentionally no responsive scaling for sponsor logo per request */
