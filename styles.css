@@ -349,27 +349,28 @@ body::before{
   display:grid;
   grid-template-columns: repeat(4, 1fr);
   gap:18px;
-  padding:18px 0 6px;
+  padding:34px 0 18px; /* match 3rdID stat band height */
 }
 .statMini{
   text-align:center;
 }
 .statMini img{
-  width:22px;
-  height:22px;
-  opacity:.92;
+  width:36px;
+  height:36px;
+  opacity:.96;
   filter: drop-shadow(0 3px 10px rgba(0,0,0,.35));
 }
 .statMini .num{
-  margin-top:8px;
+  margin-top:10px;
   font-weight:900;
-  font-size:16px;
+  font-size:22px;
+  line-height:1;
   color:rgba(255,255,255,.92);
 }
 .statMini .lbl{
-  margin-top:2px;
-  font-size:10px;
-  color:rgba(255,255,255,.60);
+  margin-top:6px;
+  font-size:12px;
+  color:rgba(255,255,255,.62);
 }
 
 /* news + video */
