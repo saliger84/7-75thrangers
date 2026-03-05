@@ -9,30 +9,33 @@
 <body>
 
 <header class="topbar">
-  <a class="brand" href="index.html">
-    <img src="logo.svg" alt="Logo" class="brand__logo">
-    <div>
-      <div class="brand__title">7-75th Ranger Regiment</div>
-      <div class="brand__sub">Realism Unit</div>
-    </div>
-  </a>
+  <div class="topbar-inner">
+    <a class="brand" href="index.html" aria-label="Home">
+      <img class="brand-mark" src="logo.svg" alt="">
+      <span class="brand-text">7-75th Ranger Regiment</span>
+    </a>
 
-  <nav class="nav">
-    <a href="forum.html">Forum</a>
-    <a href="about.html">About Us</a>
-    <a href="calendar.html">Calendar</a>
-    <div class="dropdown">
-      <button class="dropbtn" type="button">MILHQ ▾</button>
-      <div class="dropdown-menu">
-        <a href="milhq_command.html">Command Structure</a>
-        <a href="roster.html">Roster</a>
-        <a href="ranks.html">Ranks</a>
-        <a href="awards.html">Awards</a>
+    <nav class="nav">
+      <a href="forum.html">Forum</a>
+      <a href="about.html">About Us</a>
+      <a href="calendar.html">Calendar</a>
+
+      <div class="drop">
+        <button class="drop-btn" type="button">MILHQ <span class="chev">▾</span></button>
+        <div class="drop-menu">
+          <a href="milhq_command.html">Command</a>
+          <a href="ranks.html">Ranks</a>
+          <a href="roster.html">Roster</a>
+          <a href="awards.html">Awards</a>
+          <a href="training.html">Training</a>
+        </div>
       </div>
-    </div>
-    <a class="nav__btn" href="login.html">Login</a>
-  </nav>
+
+      <a class="login-btn" href="login.html">Login</a>
+    </nav>
+  </div>
 </header>
+<div class="topbar-divider"></div>
 
 <main class="shell">
 
