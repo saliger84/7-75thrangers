@@ -18,8 +18,8 @@
   --accent:#f59e0b;
 
   /* 3rdID frame width */
-  --frameW: 1760px;          /* wider main width like 3rdinf */   /* increase if you want even wider */
-  --framePad: 12px;
+  --frameW:1760px;   /* increase if you want even wider */
+  --framePad:10px;
 
   --radius: 3px;
   --shadow: 0 16px 40px rgba(0,0,0,.55);
@@ -35,8 +35,7 @@ body{
 
   /* dark site base */
   background:
-    radial-gradient(2200px 1200px at 50% 30%, rgba(255,255,255,.045), transparent 65%),
-    radial-gradient(1600px 900px at 50% -10%, rgba(255,255,255,.07), transparent 62%),
+    radial-gradient(1200px 700px at 50% -10%, rgba(255,255,255,.06), transparent 60%),
     linear-gradient(180deg, var(--bg0), var(--bg1));
 }
 
@@ -51,7 +50,7 @@ body::before{
     radial-gradient(circle at 30% 60%, rgba(63,92,62,.38) 0 22%, transparent 23%),
     radial-gradient(circle at 75% 30%, rgba(105,88,44,.34) 0 20%, transparent 21%),
     radial-gradient(circle at 85% 75%, rgba(70,92,58,.32) 0 26%, transparent 27%);
-  opacity:.18;
+  opacity:.12;
   mix-blend-mode:multiply;
 }
 
@@ -192,17 +191,7 @@ body::before{
 }
 
 /* Hero shading (lighter than before) */
-.hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    linear-gradient(180deg,
-      rgba(0,0,0,.10) 0%,
-      rgba(0,0,0,.20) 35%,
-      rgba(0,0,0,.35) 100%);
-  pointer-events:none;
-}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.06), rgba(0,0,0,.12) 45%, rgba(0,0,0,.22));}
 
 /* soft bottom fade like 3rdID */
 .hero::after{
@@ -415,7 +404,7 @@ body::before{
   text-align:center;
 }
 .sponsor img{
-  max-width: var(--frameW);
+  max-width:520px;
   width:100%;
   height:auto;
   opacity:.95;
