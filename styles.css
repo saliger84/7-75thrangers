@@ -18,8 +18,8 @@
   --accent:#f59e0b;
 
   /* 3rdID frame width */
-  --frameW: 1560px;   /* increase if you want even wider */
-  --framePad: 18px;
+  --frameW: 1760px;          /* wider main width like 3rdinf */   /* increase if you want even wider */
+  --framePad: 12px;
 
   --radius: 3px;
   --shadow: 0 16px 40px rgba(0,0,0,.55);
@@ -35,7 +35,8 @@ body{
 
   /* dark site base */
   background:
-    radial-gradient(1200px 700px at 50% -10%, rgba(255,255,255,.06), transparent 60%),
+    radial-gradient(2200px 1200px at 50% 30%, rgba(255,255,255,.045), transparent 65%),
+    radial-gradient(1600px 900px at 50% -10%, rgba(255,255,255,.07), transparent 62%),
     linear-gradient(180deg, var(--bg0), var(--bg1));
 }
 
@@ -414,7 +415,7 @@ body::before{
   text-align:center;
 }
 .sponsor img{
-  max-width:520px;
+  max-width: var(--frameW);
   width:100%;
   height:auto;
   opacity:.95;
