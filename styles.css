@@ -231,3 +231,131 @@ a{color:inherit}
   .shell{grid-template-columns:1fr}
   .grid4{grid-template-columns:1fr 1fr}
 }
+/* ===== MILHQ ROSTER STYLES ===== */
+.cocGrid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:12px;
+}
+.cocCard{
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 14px;
+  padding: 14px;
+}
+.cocRole{
+  font-weight: 950;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: 12px;
+  opacity: .85;
+}
+.cocName{
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: 900;
+}
+.cocMeta{
+  margin-top: 6px;
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 13px;
+}
+.note{
+  margin-top:12px;
+  padding:12px 14px;
+  border-radius:12px;
+  border:1px solid rgba(209,177,90,.22);
+  background: rgba(209,177,90,.08);
+  color: rgba(231,237,247,.92);
+  font-weight: 700;
+}
+
+/* Company Cards */
+.orgGrid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:12px;
+}
+.orgCard{
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 16px;
+  overflow:hidden;
+}
+.orgHeader{
+  padding:14px;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.04), rgba(0,0,0,.18));
+}
+.orgTitle{
+  font-weight: 950;
+  font-size: 16px;
+}
+.orgSub{
+  margin-top: 4px;
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 13px;
+}
+.orgRow{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:10px;
+  padding:14px;
+}
+.orgSlot{
+  border: 1px solid rgba(255,255,255,.08);
+  background: rgba(10,14,20,.55);
+  border-radius: 14px;
+  padding: 12px;
+}
+.slotRole{
+  font-weight: 950;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: 11px;
+  opacity: .85;
+}
+.slotName{
+  margin-top: 6px;
+  font-size: 16px;
+  font-weight: 900;
+}
+.slotMeta{
+  margin-top: 4px;
+  color: var(--muted);
+  font-weight: 800;
+  font-size: 12px;
+}
+
+.orgTableWrap{padding:0 14px 14px}
+.orgTable{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  border-radius:14px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.08);
+}
+.orgTable th,.orgTable td{
+  padding:10px 10px;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  text-align:left;
+  font-size:13px;
+}
+.orgTable th{
+  background: rgba(255,255,255,.04);
+  font-size: 11px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  opacity:.85;
+}
+.orgTable tr:last-child td{border-bottom:none}
+
+/* Responsive */
+@media (max-width: 980px){
+  .cocGrid{grid-template-columns: 1fr;}
+  .orgGrid{grid-template-columns: 1fr;}
+}
