@@ -13,21 +13,24 @@
     <a class="brand" href="index.html" aria-label="Home">
       <img class="brand-mark" src="logo.svg" alt="">
       <span class="brand-text">7-75th Ranger Regiment</span>
+      <span class="brand-sub">Realism Unit</span>
     </a>
 
-    <nav class="nav">
+    <nav class="nav" aria-label="Primary">
       <a href="forum.html">Forum</a>
       <a href="about.html">About Us</a>
       <a href="calendar.html">Calendar</a>
 
       <div class="drop">
-        <button class="drop-btn" type="button">MILHQ <span class="chev">▾</span></button>
-        <div class="drop-menu">
-          <a href="milhq_command.html">Command</a>
-          <a href="ranks.html">Ranks</a>
-          <a href="roster.html">Roster</a>
-          <a href="awards.html">Awards</a>
-          <a href="training.html">Training</a>
+        <button class="drop-btn" type="button" aria-haspopup="true" aria-expanded="false">
+          MILHQ <span class="chev">▾</span>
+        </button>
+        <div class="drop-menu" role="menu">
+          <a role="menuitem" href="milhq_command.html">Command</a>
+          <a role="menuitem" href="ranks.html">Ranks</a>
+          <a role="menuitem" href="roster.html">Roster</a>
+          <a role="menuitem" href="awards.html">Awards</a>
+          <a role="menuitem" href="training.html">Training</a>
         </div>
       </div>
 
@@ -38,8 +41,9 @@
 
 <main class="shell">
 
-  <!-- Swap hero image filename here if needed -->
+  <!-- HERO -->
   <section class="hero" style="--hero:url('hero_home.jpg')">
+    <div class="hero-shade"></div>
     <div class="heroInner">
       <h1>ROCK OF THE MARNE</h1>
       <p>Providing the ultimate MilSim experience.</p>
@@ -50,7 +54,7 @@
     </div>
   </section>
 
-  <!-- IMPORTANT: Cards start BELOW hero (no overlap) -->
+  <!-- FEATURE STRIP (BELOW HERO, NO OVERLAP) -->
   <section class="slab">
 
     <div class="feature3">
@@ -73,13 +77,31 @@
       </article>
     </div>
 
-    <div class="statRow">
-      <div class="statMini"><img src="ico_members.svg" alt=""><div class="num">107</div><div class="lbl">Unit Members</div></div>
-      <div class="statMini"><img src="ico_missions.svg" alt=""><div class="num">557</div><div class="lbl">Completed Missions</div></div>
-      <div class="statMini"><img src="ico_awards.svg" alt=""><div class="num">112</div><div class="lbl">Achievable Awards</div></div>
-      <div class="statMini"><img src="ico_courses.svg" alt=""><div class="num">49</div><div class="lbl">Courses & Schools</div></div>
+    <!-- STATS ROW -->
+    <div class="statRow" aria-label="Unit stats">
+      <div class="statMini">
+        <img src="ico_members.svg" alt="">
+        <div class="num">107</div>
+        <div class="lbl">Unit Members</div>
+      </div>
+      <div class="statMini">
+        <img src="ico_missions.svg" alt="">
+        <div class="num">557</div>
+        <div class="lbl">Completed Missions</div>
+      </div>
+      <div class="statMini">
+        <img src="ico_awards.svg" alt="">
+        <div class="num">112</div>
+        <div class="lbl">Achievable Awards</div>
+      </div>
+      <div class="statMini">
+        <img src="ico_courses.svg" alt="">
+        <div class="num">49</div>
+        <div class="lbl">Courses &amp; Schools</div>
+      </div>
     </div>
 
+    <!-- NEWS + VIDEO (MATCHED SIZE/SHAPE) -->
     <div class="twoCol">
       <section class="newsBox">
         <div class="newsHead">Latest News</div>
@@ -93,33 +115,32 @@
         </ul>
       </section>
 
-      <section class="videoBox">
-        <div class="videoFrame">VIDEO PLACEHOLDER</div>
+      <section class="videoBox" aria-label="Featured video">
+        <div class="videoInner">
+          <iframe
+            class="yt"
+            src="https://www.youtube-nocookie.com/embed/CW_RSem3iu0?rel=0&modestbranding=1"
+            title="Featured Unit Video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
       </section>
     </div>
 
-    <div class="sponsor">
+    <!-- SPONSOR (ALWAYS BOTTOM; TEAMSpeak size locked) -->
+    <section class="sponsor" aria-label="Sponsor">
       <img class="sponsor-logo" src="teamspeak_logo.png" alt="TeamSpeak">
       <div class="sponsor-sub">Official Sponsor</div>
-
-      <div class="socialIcons" aria-label="Social links">
-        <a href="https://discord.com" title="Discord" aria-label="Discord">
-          <img src="icon_discord.png" alt="">
-        </a>
-        <a href="https://www.youtube.com" title="YouTube" aria-label="YouTube">
-          <img src="icon_youtube.png" alt="">
-        </a>
-        <a href="https://x.com" title="X" aria-label="X">
-          <img src="icon_twitch.png" alt="">
-        </a>
-        <a href="forum.html" title="Forum" aria-label="Forum">
-          <img src="icon_forum.png" alt="">
-        </a>
-        <a href="twitch.html" title="Twitch" aria-label="Twitch">
-          <img src="icon_twitch.png" alt="">
-        </a>
+      <div class="socialRow" aria-label="Social links">
+        <a class="socialBtn" href="discord.html" title="Discord" aria-label="Discord">D</a>
+        <a class="socialBtn" href="youtube.html" title="YouTube" aria-label="YouTube">Y</a>
+        <a class="socialBtn" href="x.html" title="X" aria-label="X">X</a>
+        <a class="socialBtn" href="facebook.html" title="Facebook" aria-label="Facebook">F</a>
+        <a class="socialBtn" href="twitch.html" title="Twitch" aria-label="Twitch">T</a>
       </div>
-    </div>
+    </section>
 
   </section>
 
