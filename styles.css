@@ -377,3 +377,124 @@ opacity:.9;
 .videoBox{
 margin-bottom:30px;
 }
+/* ===== Top Bar (3rdInf-style) ===== */
+.topbar{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(18,18,18,.92);
+  backdrop-filter: blur(6px);
+}
+
+.topbar-inner{
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 10px 18px;              /* tighter like 3rdinf */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.topbar-divider{
+  height: 1px;
+  background: rgba(255,255,255,.06);
+}
+
+/* Brand (logo + name) */
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  text-decoration:none;
+  color:#eaeaea;
+}
+
+.brand-mark{
+  width:18px;
+  height:18px;
+  display:block;
+  opacity:.95;
+}
+
+.brand-text{
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:.2px;
+  color:#d8d8d8;
+}
+
+/* Nav links */
+.nav{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.nav a{
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:.2px;
+  color:#d7d7d7;
+  text-decoration:none;
+  opacity:.92;
+}
+
+.nav a:hover{ opacity:1; }
+
+/* MILHQ dropdown (pill button like 3rdinf) */
+.drop{
+  position:relative;
+}
+
+.drop-btn{
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.2px;
+  color:#e1e1e1;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 16px;
+  padding: 6px 10px;
+  cursor:pointer;
+}
+
+.drop-btn:hover{
+  background: rgba(255,255,255,.09);
+}
+
+.chev{ opacity:.8; margin-left:4px; }
+
+.drop-menu{
+  position:absolute;
+  right:0;
+  top: calc(100% + 10px);
+  min-width: 180px;
+  background: rgba(22,22,22,.98);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 10px;
+  box-shadow: 0 18px 40px rgba(0,0,0,.55);
+  padding: 8px;
+  display:none;
+}
+
+.drop-menu a{
+  display:block;
+  padding: 9px 10px;
+  border-radius: 8px;
+  color:#dcdcdc;
+}
+
+.drop-menu a:hover{
+  background: rgba(255,255,255,.06);
+}
+
+.drop:hover .drop-menu{ display:block; }
+
+/* Login button */
+.login-btn{
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 16px;
+  padding: 6px 10px;
+}
