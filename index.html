@@ -11,125 +11,108 @@
 <header class="topbar">
   <div class="topbar-inner">
     <a class="brand" href="index.html" aria-label="Home">
-      <img class="brand-mark" src="logo.svg" alt="7-75th Ranger Regiment">
-      <div class="brand-stack">
-        <div class="brand-title">7-75th Ranger Regiment</div>
-        <div class="brand-sub">Realism Unit</div>
-      </div>
+      <img class="brand-mark" src="logo.svg" alt="">
+      <span class="brand-copy">
+        <span class="brand-title">7-75th Ranger Regiment</span>
+        <span class="brand-sub">Realism Unit</span>
+      </span>
     </a>
 
-    <nav class="nav" aria-label="Primary">
+    <nav class="nav">
       <a href="forum.html">Forum</a>
       <a href="about.html">About Us</a>
       <a href="calendar.html">Calendar</a>
 
       <div class="drop">
-        <button class="drop-btn" type="button" aria-haspopup="true" aria-expanded="false">
-          MILHQ <span class="chev">▾</span>
-        </button>
-        <div class="drop-menu" role="menu">
-          <a role="menuitem" href="milhq_command.html">Command</a>
-          <a role="menuitem" href="ranks.html">Ranks</a>
-          <a role="menuitem" href="roster.html">Roster</a>
-          <a role="menuitem" href="awards.html">Awards</a>
-          <a role="menuitem" href="training.html">Training</a>
+        <button class="drop-btn" type="button">MILHQ <span class="chev">▾</span></button>
+        <div class="drop-menu">
+          <a href="milhq_command.html">Command</a>
+          <a href="ranks.html">Ranks</a>
+          <a href="roster.html">Roster</a>
+          <a href="awards.html">Awards</a>
+          <a href="training.html">Training</a>
         </div>
       </div>
 
-      <span class="nav-sep" aria-hidden="true"></span>
-      <a class="login-pill" href="login.html">Login</a>
+      <a class="login-btn" href="login.html">Login</a>
     </nav>
   </div>
 </header>
 
-<main class="frame">
+<main class="shell">
 
-  <!-- HERO -->
+  <!-- Hero (image set via CSS variable so it matches 3rdinf-style overlay exactly) -->
   <section class="hero" style="--hero:url('hero_home_3rdinf.jpg')">
-    <div class="hero-overlay"></div>
     <div class="hero-inner">
       <h1>ROCK OF THE MARNE</h1>
       <p>Providing the ultimate MilSim experience.</p>
       <div class="cta">
-        <a class="btn btn-primary" href="enlist.html">Enlist Today!</a>
-        <a class="btn btn-ghost" href="about.html">Learn More</a>
+        <a class="btn btn--primary" href="enlist.html">Enlist Today!</a>
+        <a class="btn btn--ghost" href="about.html">Learn More</a>
       </div>
     </div>
   </section>
 
-  <!-- CONTENT SLAB -->
   <section class="slab">
 
-    <div class="cards3">
-      <article class="card">
-        <div class="card-ico"><img src="ico_history.svg" alt=""></div>
+    <div class="feature3">
+      <article class="featureCard">
+        <div class="featureIcon"><img src="ico_history.svg" alt=""></div>
         <h3>RICH HISTORY</h3>
         <p>Built on realism, discipline, and consistency. Structured training, leadership development, and authentic operations.</p>
       </article>
 
-      <article class="card">
-        <div class="card-ico"><img src="ico_events.svg" alt=""></div>
+      <article class="featureCard">
+        <div class="featureIcon"><img src="ico_events.svg" alt=""></div>
         <h3>WEEKLY EVENTS</h3>
         <p>Weekly missions, squad drills, and training nights with a predictable schedule so members always know what’s next.</p>
       </article>
 
-      <article class="card">
-        <div class="card-ico"><img src="ico_specs.svg" alt=""></div>
+      <article class="featureCard">
+        <div class="featureIcon"><img src="ico_specs.svg" alt=""></div>
         <h3>SPECIALIZATIONS</h3>
         <p>Infantry, reconnaissance, support, leadership, medic, aviation and more. Choose a path and progress through qualifications.</p>
       </article>
     </div>
 
-    <div class="stats4">
-      <div class="stat">
-        <img src="ico_members.svg" alt="">
-        <div class="num">107</div>
-        <div class="lbl">Unit Members</div>
-      </div>
-      <div class="stat">
-        <img src="ico_missions.svg" alt="">
-        <div class="num">557</div>
-        <div class="lbl">Completed Missions</div>
-      </div>
-      <div class="stat">
-        <img src="ico_awards.svg" alt="">
-        <div class="num">112</div>
-        <div class="lbl">Achievable Awards</div>
-      </div>
-      <div class="stat">
-        <img src="ico_courses.svg" alt="">
-        <div class="num">49</div>
-        <div class="lbl">Courses &amp; Schools</div>
-      </div>
+    <div class="statRow">
+      <div class="statMini"><img src="ico_members.svg" alt=""><div class="num">107</div><div class="lbl">Unit Members</div></div>
+      <div class="statMini"><img src="ico_missions.svg" alt=""><div class="num">557</div><div class="lbl">Completed Missions</div></div>
+      <div class="statMini"><img src="ico_awards.svg" alt=""><div class="num">112</div><div class="lbl">Achievable Awards</div></div>
+      <div class="statMini"><img src="ico_courses.svg" alt=""><div class="num">49</div><div class="lbl">Courses &amp; Schools</div></div>
     </div>
 
-    <div class="grid2">
-      <section class="news">
-        <div class="news-head">Latest News</div>
-        <ul class="news-list">
+    <div class="twoCol">
+      <section class="newsBox">
+        <div class="newsHead">Latest News</div>
+        <ul class="newsList">
           <li>Recent Platoon Sergeant Selections</li>
+          <li>More Than a Century of Citizen-Sailor Service</li>
           <li>Medical Qualification Course</li>
           <li>Land Navigation Course #26-01</li>
           <li>Graduates of OSUT Class #26-08</li>
           <li>Cease-fire Day in the Persian Gulf War</li>
-          <li>End of Slavery in the United States</li>
+          <li>81st anniversary of the Battle of Iwo Jima</li>
+          <li>February 19 — Coast Guard Reserve Birthday Honors Citizen-Sailors in Service to the Nation</li>
+          <li>Fort Stewart-Hunter Army Airfield Public Affairs Team recognized for excellence, digital media campaign wins top honors</li>
+          <li>The End of Slavery in the United States</li>
         </ul>
       </section>
 
-      <section class="video">
-        <div class="video-frame">VIDEO PLACEHOLDER</div>
+      <section class="videoBox">
+        <div class="videoFrame">VIDEO PLACEHOLDER</div>
       </section>
     </div>
 
-    <section class="sponsor">
+    <div class="sponsor">
       <img class="sponsor-logo" src="teamspeak_logo.png" alt="TeamSpeak">
-      <div class="social">
-        <a class="social-btn" href="twitch.html" title="Twitch">T</a>
-        <a class="social-btn" href="forum.html" title="Forum">F</a>
-        <a class="social-btn" href="news.html" title="News">N</a>
-        <a class="social-btn" href="calendar.html" title="Calendar">C</a>
+      <div class="socialRow">
+        <a class="socialBtn" href="twitch.html" title="Twitch">T</a>
+        <a class="socialBtn" href="forum.html" title="Forum">F</a>
+        <a class="socialBtn" href="news.html" title="News">N</a>
+        <a class="socialBtn" href="calendar.html" title="Calendar">C</a>
       </div>
-    </section>
+    </div>
 
   </section>
 
