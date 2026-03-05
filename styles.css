@@ -258,13 +258,18 @@ body::before{
   margin-top: 0; /* directly below hero */
 }
 .featureCard{
+  /* Match 3rdID: big centered cards */
   position:relative;
-  background: rgba(56,60,66,.55);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,0)),
+    repeating-linear-gradient(45deg, rgba(255,255,255,.035) 0 2px, rgba(0,0,0,0) 2px 18px),
+    rgba(56,60,66,.55);
   border:1px solid rgba(255,255,255,.07);
   border-radius:4px;
-  padding:16px 16px 14px;
-  min-height:86px;
+  padding:26px 22px 22px;
+  min-height:210px;
   overflow:hidden;
+  text-align:center;
 }
 .featureCard::before{
   content:"";
@@ -277,25 +282,28 @@ body::before{
   pointer-events:none;
 }
 .featureIcon{
-  width:28px;height:28px;
+  width:56px;height:56px;
   display:flex;align-items:center;justify-content:center;
-  margin-bottom:10px;
+  margin: 0 auto 12px;
   filter: drop-shadow(0 4px 8px rgba(0,0,0,.30));
 }
-.featureIcon img{width:20px;height:20px;opacity:.95}
+.featureIcon img{width:28px;height:28px;opacity:.95}
 .featureCard h3{
-  margin:0 0 6px;
-  font-size:11px;
-  letter-spacing:.06em;
-  font-weight:900;
+  margin:0 0 10px;
+  font-size:26px;
+  letter-spacing:.03em;
+  font-weight:300;
+  text-transform:uppercase;
   color:rgba(255,255,255,.92);
 }
 .featureCard p{
   margin:0;
   font-size:11px;
-  line-height:1.35;
-  color:rgba(255,255,255,.70);
-  max-width: 46ch;
+  line-height:1.6;
+  color:rgba(255,255,255,.75);
+  max-width: 52ch;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 /* ---------- Stats row (4 across) ---------- */
@@ -336,7 +344,8 @@ body::before{
 .twoCol{
   margin-top: 16px;
   display:grid;
-  grid-template-columns: 1fr 1fr;
+  /* Match 3rdID proportions: narrower news, wider video */
+  grid-template-columns: 520px 1fr;
   gap:18px;
   align-items:stretch;
 }
@@ -347,7 +356,7 @@ body::before{
   border:1px solid rgba(255,255,255,.07);
   border-radius:4px;
   overflow:hidden;
-  min-height: 360px; /* LOCK same height */
+  min-height: 430px; /* LOCK same height (bigger like 3rdID) */
   display:flex;
   flex-direction:column;
 }
@@ -358,7 +367,7 @@ body::before{
   color:rgba(255,255,255,.92);
   font-weight:900;
   font-size:12px;
-  padding: 10px 12px;
+  padding: 12px 16px;
 }
 .newsList{
   list-style:none;
@@ -369,7 +378,7 @@ body::before{
   flex-direction:column;
 }
 .newsList li{
-  padding: 12px 12px;
+  padding: 14px 16px;
   border-top:1px solid rgba(255,255,255,.08);
   font-size:11px;
   color:rgba(255,255,255,.82);
@@ -380,7 +389,7 @@ body::before{
 /* Video */
 .videoInner{
   flex:1;
-  padding: 12px;
+  padding: 14px;
   display:flex;
 }
 .yt{
