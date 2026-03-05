@@ -12,10 +12,7 @@
   <div class="topbar-inner">
     <a class="brand" href="index.html" aria-label="Home">
       <img class="brand-mark" src="logo.svg" alt="">
-      <span class="brand-copy">
-        <span class="brand-title">7-75th Ranger Regiment</span>
-        <span class="brand-sub">Realism Unit</span>
-      </span>
+      <span class="brand-text">7-75th Ranger Regiment</span>
     </a>
 
     <nav class="nav">
@@ -38,12 +35,12 @@
     </nav>
   </div>
 </header>
+<div class="topbar-divider"></div>
 
 <main class="shell">
 
-  <!-- Hero (image set via CSS variable so it matches 3rdinf-style overlay exactly) -->
-  <section class="hero" style="--hero:url('hero_home_3rdinf.jpg')">
-    <div class="hero-inner">
+  <section class="hero" style="--hero:url('hero_home.jpg')">
+    <div class="heroInner">
       <h1>ROCK OF THE MARNE</h1>
       <p>Providing the ultimate MilSim experience.</p>
       <div class="cta">
@@ -53,6 +50,7 @@
     </div>
   </section>
 
+  <!-- IMPORTANT: features are inside .slab (below hero), so they will NOT overlap -->
   <section class="slab">
 
     <div class="feature3">
@@ -79,7 +77,7 @@
       <div class="statMini"><img src="ico_members.svg" alt=""><div class="num">107</div><div class="lbl">Unit Members</div></div>
       <div class="statMini"><img src="ico_missions.svg" alt=""><div class="num">557</div><div class="lbl">Completed Missions</div></div>
       <div class="statMini"><img src="ico_awards.svg" alt=""><div class="num">112</div><div class="lbl">Achievable Awards</div></div>
-      <div class="statMini"><img src="ico_courses.svg" alt=""><div class="num">49</div><div class="lbl">Courses &amp; Schools</div></div>
+      <div class="statMini"><img src="ico_courses.svg" alt=""><div class="num">49</div><div class="lbl">Courses & Schools</div></div>
     </div>
 
     <div class="twoCol">
@@ -87,15 +85,11 @@
         <div class="newsHead">Latest News</div>
         <ul class="newsList">
           <li>Recent Platoon Sergeant Selections</li>
-          <li>More Than a Century of Citizen-Sailor Service</li>
           <li>Medical Qualification Course</li>
           <li>Land Navigation Course #26-01</li>
           <li>Graduates of OSUT Class #26-08</li>
           <li>Cease-fire Day in the Persian Gulf War</li>
-          <li>81st anniversary of the Battle of Iwo Jima</li>
-          <li>February 19 — Coast Guard Reserve Birthday Honors Citizen-Sailors in Service to the Nation</li>
-          <li>Fort Stewart-Hunter Army Airfield Public Affairs Team recognized for excellence, digital media campaign wins top honors</li>
-          <li>The End of Slavery in the United States</li>
+          <li>End of Slavery in the United States</li>
         </ul>
       </section>
 
@@ -105,7 +99,7 @@
     </div>
 
     <div class="sponsor">
-      <img class="sponsor-logo" src="teamspeak_logo.png" alt="TeamSpeak">
+      <img src="teamspeak_logo.png" alt="TeamSpeak" style="max-width:520px;width:100%;height:auto;opacity:.95">
       <div class="socialRow">
         <a class="socialBtn" href="twitch.html" title="Twitch">T</a>
         <a class="socialBtn" href="forum.html" title="Forum">F</a>
