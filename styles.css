@@ -1,28 +1,19 @@
-/* =========================================================
-   7-75th Ranger Regiment — 3rdID-style home layout (1:1 scale)
-   Drop-in replacement for styles.css
-   ========================================================= */
-
-/* Theme */
 :root{
   --bg0:#0e1114;
   --bg1:#11161b;
-  --panel:#1f2429;
-  --panel2:#252b31;
-  --line:rgba(255,255,255,.10);
+  --panel:#1a1f24;
+  --panel2:#20262c;
+  --line:rgba(255,255,255,.08);
   --text:rgba(255,255,255,.92);
-  --muted:rgba(255,255,255,.72);
+  --muted:rgba(255,255,255,.70);
   --muted2:rgba(255,255,255,.56);
-
-  /* 3rdID-ish accent */
   --accent:#f59e0b;
 
-  /* 3rdID frame width */
-  --frameW:1760px;   /* increase if you want even wider */
-  --framePad:10px;
+  /* main width similar to 3rdinf feel */
+  --frameW:1500px;
+  --framePad:18px;
 
-  --radius: 3px;
-  --shadow: 0 16px 40px rgba(0,0,0,.55);
+  --shadow: 0 10px 30px rgba(0,0,0,.45);
   --font: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
 }
 
@@ -30,117 +21,95 @@
 html,body{height:100%}
 body{
   margin:0;
-  font-family:var(--font);
+  font-family: var(--font);
   color:var(--text);
-
-  /* dark site base */
   background:
     radial-gradient(1200px 700px at 50% -10%, rgba(255,255,255,.06), transparent 60%),
     linear-gradient(180deg, var(--bg0), var(--bg1));
 }
 
-/* subtle camo side edges (lightweight) */
+/* subtle camo / side texture vibe */
 body::before{
   content:"";
-  position:fixed;
-  inset:0;
+  position:fixed; inset:0;
   pointer-events:none;
   background:
     radial-gradient(circle at 10% 20%, rgba(133,104,53,.40) 0 18%, transparent 19%),
     radial-gradient(circle at 30% 60%, rgba(63,92,62,.38) 0 22%, transparent 23%),
     radial-gradient(circle at 75% 30%, rgba(105,88,44,.34) 0 20%, transparent 21%),
     radial-gradient(circle at 85% 75%, rgba(70,92,58,.32) 0 26%, transparent 27%);
-  opacity:.12;
+  opacity:.18;
   mix-blend-mode:multiply;
 }
 
-/* =========================================================
-   Topbar (match 3rdID sizing)
-   ========================================================= */
+/* TOPBAR */
 .topbar{
   position:sticky;
   top:0;
   z-index:50;
   height:56px;
-  background: rgba(36,40,46,.90);
-  border-bottom:1px solid rgba(255,255,255,.08);
+  background: rgba(24,28,33,.92);
+  border-bottom:1px solid rgba(255,255,255,.06);
   backdrop-filter: blur(10px);
 }
-
 .topbar-inner{
+  max-width: var(--frameW);
+  margin: 0 auto;
   height:56px;
-  max-width:var(--frameW);
-  margin:0 auto;
-  padding:0 var(--framePad);
+  padding: 0 var(--framePad);
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:14px;
 }
 
-/* brand */
 .brand{
   display:flex;
   align-items:center;
   gap:10px;
   text-decoration:none;
   color:var(--text);
-  min-width:220px;
 }
-.brand-mark{
-  width:20px;
-  height:20px;
-  display:block;
-}
-.brand-text{
-  font-weight:800;
-  font-size:13px;
-  letter-spacing:.2px;
-}
+.brand-mark{ width:18px; height:18px; display:block; opacity:.95; }
+.brand-text{ font-weight:800; font-size:13px; letter-spacing:.2px; }
 
-/* right nav */
 .nav{
   display:flex;
   align-items:center;
   gap:18px;
   font-size:12px;
-  font-weight:700;
-  letter-spacing:.2px;
+  font-weight:600;
 }
 .nav a{
-  color:rgba(255,255,255,.86);
+  color:#d7d7d7;
   text-decoration:none;
-  padding:8px 6px;
-  border-radius:8px;
+  opacity:.92;
 }
-.nav a:hover{color:#fff}
+.nav a:hover{ opacity:1; }
 
-/* MILHQ pill */
-.drop{position:relative}
+.drop{ position:relative; }
 .drop-btn{
-  appearance:none;
-  border:1px solid rgba(255,255,255,.14);
-  background: rgba(255,255,255,.06);
-  color:rgba(255,255,255,.90);
-  font-weight:800;
   font-size:12px;
+  font-weight:700;
   letter-spacing:.2px;
-  padding:6px 10px;
-  border-radius:16px;
+  color:#e1e1e1;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 16px;
+  padding: 6px 10px;
   cursor:pointer;
 }
-.drop-btn:hover{background: rgba(255,255,255,.09)}
-.chev{opacity:.8; margin-left:4px}
+.drop-btn:hover{ background: rgba(255,255,255,.09); }
+.chev{ opacity:.8; margin-left:4px; }
 
 .drop-menu{
   position:absolute;
   right:0;
   top: calc(100% + 10px);
-  min-width: 190px;
+  min-width: 180px;
   background: rgba(22,22,22,.98);
   border: 1px solid rgba(255,255,255,.10);
   border-radius: 10px;
-  box-shadow: var(--shadow);
+  box-shadow: 0 18px 40px rgba(0,0,0,.55);
   padding: 8px;
   display:none;
 }
@@ -148,332 +117,272 @@ body::before{
   display:block;
   padding: 9px 10px;
   border-radius: 8px;
-  color:rgba(255,255,255,.86);
+  color:#dcdcdc;
 }
-.drop-menu a:hover{background: rgba(255,255,255,.06)}
-.drop:hover .drop-menu{display:block}
+.drop-menu a:hover{ background: rgba(255,255,255,.06); }
+.drop:hover .drop-menu{ display:block; }
 
-/* login pill */
 .login-btn{
-  border:1px solid rgba(255,255,255,.14);
   background: rgba(255,255,255,.06);
-  padding:6px 10px !important;
-  border-radius:16px;
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 16px;
+  padding: 6px 10px;
 }
 
-.topbar-divider{
-  height:0;
-}
-
-/* =========================================================
-   Main frame
-   ========================================================= */
+/* MAIN WRAP */
 .shell{
-  max-width:var(--frameW);
-  margin:0 auto;
-  padding:0 var(--framePad) 44px;
+  max-width: var(--frameW);
+  margin: 0 auto;
+  padding: 18px var(--framePad) 40px;
+  width: 100%;
 }
 
-/* =========================================================
-   Hero (fix: too dark + correct padding)
-   ========================================================= */
+/* HERO */
 .hero{
-  margin-top:18px;
-  height:520px;                 /* match screenshot proportion */
   position:relative;
-  overflow:hidden;
+  height: 520px;
   background-image: var(--hero);
   background-size: cover;
   background-position: center;
   background-repeat:no-repeat;
-  border:0;
-  border-radius:0;
+  border-radius: 0;
+  overflow:hidden;
 }
 
-/* Hero shading (lighter than before) */
-.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.06), rgba(0,0,0,.12) 45%, rgba(0,0,0,.22));}
-
-/* soft bottom fade like 3rdID */
+/* lighter hero overlay (fix “too dark”) */
 .hero::after{
   content:"";
-  position:absolute;
-  left:0; right:0; bottom:0;
-  height:180px;
-  background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.60));
+  position:absolute; inset:0;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.12) 0%, rgba(0,0,0,.18) 55%, rgba(0,0,0,.22) 100%);
   pointer-events:none;
 }
 
 .heroInner{
   position:absolute;
   left:50%;
-  top:50%;
-  transform: translate(-50%, -55%);
-  width:100%;
-  max-width: calc(var(--frameW) - (var(--framePad) * 2));
-  padding:0 120px;              /* centers text like 3rdID */
+  top:42%;
+  transform:translate(-50%,-50%);
   text-align:center;
+  width:min(980px, 92%);
   z-index:1;
 }
-
-.hero h1{
-  margin:0 0 10px;
-  font-size:48px;
+.heroInner h1{
+  margin:0;
+  font-size:44px;
+  letter-spacing:.08em;
   font-weight:900;
-  letter-spacing:1px;
   text-transform:uppercase;
-  text-shadow: 0 4px 16px rgba(0,0,0,.55);
+  text-shadow:0 10px 18px rgba(0,0,0,.45);
 }
-.hero p{
-  margin:0 0 18px;
-  color:rgba(255,255,255,.86);
-  font-size:15px;
-  text-shadow: 0 3px 12px rgba(0,0,0,.45);
+.heroInner p{
+  margin:8px 0 14px;
+  color: rgba(255,255,255,.86);
+  font-size:13px;
+  text-shadow:0 8px 14px rgba(0,0,0,.35);
 }
-
-.cta{
-  display:flex;
-  gap:12px;
-  justify-content:center;
-  align-items:center;
-}
+.cta{ display:flex; justify-content:center; gap:10px; }
 
 .btn{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  height:32px;
-  padding:0 14px;
+  height:28px;
+  padding:0 12px;
   border-radius:4px;
-  font-weight:800;
-  font-size:12px;
+  font-size:11px;
+  font-weight:700;
   text-decoration:none;
-  border:1px solid rgba(255,255,255,.16);
+  border:1px solid rgba(255,255,255,.14);
 }
 .btn--primary{
   background: var(--accent);
-  border-color: rgba(0,0,0,.25);
-  color:#141414;
+  color:#111;
+  border-color: rgba(0,0,0,.2);
 }
-.btn--primary:hover{filter:brightness(1.04)}
 .btn--ghost{
   background: rgba(0,0,0,.28);
-  color:rgba(255,255,255,.90);
+  color:#fff;
 }
-.btn--ghost:hover{background: rgba(255,255,255,.08)}
 
-/* =========================================================
-   Slab section (everything under hero)
-   ========================================================= */
+/* CONTENT SLAB */
 .slab{
-  background: rgba(40,44,50,.82);
-  border:1px solid rgba(255,255,255,.08);
-  box-shadow: 0 18px 60px rgba(0,0,0,.55);
-  margin-top:0;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.06);
+  padding: 18px;
 }
 
-/* top spacing so cards are BELOW hero, not overlapping */
-.slab{
-  padding:18px;
-}
-
-/* 3 feature cards */
-
+/* FEATURE CARDS */
 .feature3{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
-  gap:18px;
-  margin-top:0;
+  gap: 18px;
+  margin-top: 18px;
 }
-
-/* 3rdID-style feature panels (tall, centered content) */
 .featureCard{
-  position:relative;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:flex-start;
-  text-align:center;
-
-  min-height:260px;
-  padding:18px 18px 16px;
-
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:4px;
-  box-shadow: 0 14px 34px rgba(0,0,0,.35);
-
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.06), rgba(0,0,0,.18)),
-    url("grit.png");
-  background-size:auto, 220px 220px;
-  background-repeat:no-repeat, repeat;
-  background-position:center, center;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.06);
+  padding: 16px;
+  min-height: 92px;
 }
-
 .featureIcon{
-  position:static;
-  width:54px;
-  height:54px;
-  margin:6px auto 12px;
-  opacity:1;
-  filter: drop-shadow(0 4px 10px rgba(0,0,0,.45));
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  width:22px;height:22px;
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:10px;
+  opacity:.9;
 }
-.featureIcon img{
-  width:54px;
-  height:54px;
-  object-fit:contain;
-}
-
+.featureIcon img{ width:22px; height:22px; display:block; }
 .featureCard h3{
-  margin:0 0 10px;
-  padding:0;
-  font-size:26px;
-  font-weight:300;
-  letter-spacing:.02em;
-  color:rgba(255,255,255,.90);
-  text-transform:uppercase;
+  margin:0 0 6px;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.06em;
 }
-
 .featureCard p{
   margin:0;
-  max-width: 520px;
-  color:rgba(255,255,255,.70);
-  font-size:12px;
-  line-height:1.6;
+  font-size:11px;
+  line-height:1.45;
+  color: rgba(255,255,255,.72);
 }
 
-
+/* STATS ROW */
 .statRow{
   display:grid;
   grid-template-columns: repeat(4, 1fr);
-  gap:18px;
-  padding:18px 0 6px;
+  gap: 18px;
+  margin: 18px 0 14px;
+  padding: 6px 0;
 }
 .statMini{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
   text-align:center;
+  gap:6px;
 }
 .statMini img{
-  width:22px;
-  height:22px;
-  opacity:.92;
-  filter: drop-shadow(0 3px 10px rgba(0,0,0,.35));
+  width:22px;height:22px;
+  opacity:.95;
 }
 .statMini .num{
-  margin-top:8px;
   font-weight:900;
-  font-size:16px;
-  color:rgba(255,255,255,.92);
+  font-size:18px;
+  line-height:1;
 }
 .statMini .lbl{
-  margin-top:2px;
   font-size:10px;
-  color:rgba(255,255,255,.60);
+  color: rgba(255,255,255,.72);
 }
 
-/* news + video */
+/* ✅ NEWS + VIDEO (BIGGER, 3rdinf-style) */
 .twoCol{
   display:grid;
-  grid-template-columns: 0.95fr 1.85fr;
-  gap:18px;
-  margin-top:10px;
+  grid-template-columns: 480px 1fr;   /* news narrower, video wider (like 3rdinf) */
+  gap: 18px;
+  align-items: stretch;
+  margin-top: 10px;
 }
 
-.newsBox{
-  border:1px solid rgba(255,255,255,.08);
-  background: rgba(22,25,29,.62);
+/* Force both boxes to be SAME OUTER SHAPE */
+.newsBox,
+.videoBox{
+  background: rgba(0,0,0,.10);
+  border: 1px solid rgba(255,255,255,.06);
+  min-height: 360px;                 /* makes the whole block bigger */
+  height: 360px;                     /* keeps both identical */
+  overflow:hidden;
 }
+
+/* NEWS */
 .newsHead{
-  background: rgba(90,98,120,.40);
-  padding:10px 12px;
-  font-weight:900;
+  background: rgba(120,140,190,.18);
+  padding: 10px 12px;
   font-size:12px;
+  font-weight:700;
 }
 .newsList{
   list-style:none;
-  padding:0;
   margin:0;
+  padding:0;
+  height: calc(360px - 42px);        /* box height minus header */
+  overflow:hidden;
 }
 .newsList li{
-  padding:10px 12px;
-  border-top:1px solid rgba(255,255,255,.07);
+  padding: 14px 12px;
+  border-top: 1px solid rgba(255,255,255,.08);
   font-size:11px;
-  color:rgba(255,255,255,.82);
+  color: rgba(255,255,255,.90);
 }
-.newsList li:hover{background: rgba(255,255,255,.04); cursor:default}
+.newsList li:first-child{ border-top:0; }
 
+/* VIDEO (fills same height as news) */
 .videoBox{
-  border:1px solid rgba(255,255,255,.08);
-  background: rgba(22,25,29,.62);
-  padding:10px;
+  padding: 14px;                     /* border spacing like 3rdinf */
 }
 .videoFrame{
-  height:340px;
-  border:1px solid rgba(255,255,255,.08);
-  background: #000;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:rgba(255,255,255,.35);
-  font-weight:900;
-  letter-spacing:.5px;
-  font-size:12px;
+  position:relative;
+  width:100%;
+  height:100%;
+  background:#000;
+  border: 1px solid rgba(255,255,255,.06);
+}
+.videoFrame iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
 }
 
-/* sponsor + socials */
+/* TEAMSpeak sponsor (keep size stable) */
 .sponsor{
-  padding:18px 0 8px;
+  margin-top: 20px;
+  padding: 22px 0 8px;
   text-align:center;
 }
-.sponsor img{
-  width:520px;
-  max-width:520px;
-
-  height:auto;
+.sponsor-logo{
+  width: 520px;            /* locked like your old version */
+  max-width: 520px;        /* do not exceed */
+  height: auto;
+  display:block;
+  margin: 0 auto 14px;
   opacity:.95;
 }
-
 .socialRow{
-  margin-top:10px;
   display:flex;
   justify-content:center;
   gap:10px;
 }
 .socialBtn{
-  width:34px;
-  height:34px;
-  border-radius:999px;
+  width:28px;
+  height:28px;
+  border-radius:50%;
   display:flex;
   align-items:center;
   justify-content:center;
   text-decoration:none;
-  color:rgba(255,255,255,.85);
-  border:1px solid rgba(255,255,255,.14);
-  background: rgba(0,0,0,.25);
-  font-weight:900;
-  font-size:12px;
+  font-weight:800;
+  font-size:11px;
+  color: rgba(255,255,255,.85);
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(0,0,0,.20);
 }
-.socialBtn:hover{background: rgba(255,255,255,.08); color:#fff}
+.socialBtn:hover{ color:#fff; background: rgba(255,255,255,.06); }
 
-/* footer */
+/* FOOTER */
 .footer{
-  padding:16px 2px 0;
-  color:rgba(255,255,255,.65);
-  font-size:12px;
+  padding: 14px 0 0;
+  font-size:11px;
+  color: rgba(255,255,255,.55);
 }
 
-/* =========================================================
-   Responsive
-   ========================================================= */
+/* responsive */
 @media (max-width: 1100px){
-  .heroInner{padding:0 40px}
-  .feature3{grid-template-columns:1fr}
-  .statRow{grid-template-columns:repeat(2,1fr)}
-  .twoCol{grid-template-columns:1fr}
-  .videoFrame{height:260px}
-}
-
-@media (max-width: 560px){
-  .sponsor img{width:100%; max-width:520px;}
+  .feature3{ grid-template-columns: 1fr; }
+  .statRow{ grid-template-columns: 1fr 1fr; }
+  .twoCol{ grid-template-columns: 1fr; }
+  .newsBox,.videoBox{ height:auto; min-height:unset; }
+  .newsList{ height:auto; }
+  .videoBox{ height: 320px; }
 }
