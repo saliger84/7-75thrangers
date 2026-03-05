@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Roster • 7-75th</title>
+  <title>MILHQ • 7-75th</title>
   <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
@@ -21,6 +21,7 @@
     <a href="forum.html">Forum</a>
     <a href="about.html">About Us</a>
     <a href="calendar.html">Calendar</a>
+
     <div class="dropdown">
       <button class="dropbtn" type="button">MILHQ ▾</button>
       <div class="dropdown-menu">
@@ -29,76 +30,222 @@
         <a href="awards.html">Awards</a>
       </div>
     </div>
+
     <a class="nav__btn" href="login.html">Login</a>
   </nav>
 </header>
 
 <main class="shell">
-  
-<aside class="sidebar">
-  <section class="sidecard">
-    <div class="sidecard__title">1 | FORT STEWART</div>
-    <a class="" href="index.html"><img src="icon_forum.png" alt="">Home</a>
-    <a class="" href="news.html"><img src="icon_forum.png" alt="">News</a>
-    <a class="" href="calendar.html"><img src="icon_calendar.png" alt="">Calendar</a>
-    <a class="" href="enlist.html"><img src="icon_training.png" alt="">Enlist</a>
-  </section>
+  <!-- LEFT SIDEBAR -->
+  <aside class="sidebar">
+    <section class="sidecard">
+      <div class="sidecard__title">1 | FORT STEWART</div>
+      <a href="index.html"><img src="icon_forum.png" alt="">Home</a>
+      <a href="news.html"><img src="icon_forum.png" alt="">News</a>
+      <a href="calendar.html"><img src="icon_calendar.png" alt="">Calendar</a>
+      <a href="enlist.html"><img src="icon_training.png" alt="">Enlist</a>
+    </section>
 
-  <section class="sidecard">
-    <div class="sidecard__title">2 | MILHQ</div>
-    <a class="active" href="roster.html"><img src="icon_roster.png" alt="">Roster</a>
-    <a class="" href="awards.html"><img src="icon_awards.png" alt="">Awards</a>
-    <a class="" href="ranks.html"><img src="icon_ranks.png" alt="">Ranks</a>
-  </section>
+    <section class="sidecard">
+      <div class="sidecard__title">2 | MILHQ</div>
+      <a class="active" href="roster.html"><img src="icon_roster.png" alt="">Roster</a>
+      <a href="awards.html"><img src="icon_awards.png" alt="">Awards</a>
+      <a href="ranks.html"><img src="icon_ranks.png" alt="">Ranks</a>
+    </section>
 
-  <section class="sidecard">
-    <div class="sidecard__title">3 | UNIT RESOURCES</div>
-    <a class="" href="training.html"><img src="icon_training.png" alt="">Training & Schools</a>
-    <a class="" href="twitch.html"><img src="icon_twitch.png" alt="">Twitch</a>
-    <a class="" href="donations.html"><img src="icon_discord.png" alt="">Donations</a>
-    <a class="" href="forum.html"><img src="icon_forum.png" alt="">Forum</a>
-  </section>
+    <section class="sidecard">
+      <div class="sidecard__title">3 | UNIT RESOURCES</div>
+      <a href="training.html"><img src="icon_training.png" alt="">Training & Schools</a>
+      <a href="twitch.html"><img src="icon_twitch.png" alt="">Twitch</a>
+      <a href="donations.html"><img src="icon_discord.png" alt="">Donations</a>
+      <a href="forum.html"><img src="icon_forum.png" alt="">Forum</a>
+    </section>
 
-  <div class="sidepillrow">
-    <span class="pill">Time Zone: CST</span>
-    <span class="pill">TeamSpeak</span>
-  </div>
-</aside>
+    <div class="sidepillrow">
+      <span class="pill">Time Zone: CST</span>
+      <span class="pill">Ops: Weekly</span>
+    </div>
+  </aside>
 
+  <!-- MAIN CONTENT -->
   <section class="content">
+
     <section class="hero" style="--hero:url('hero_milhq.jpg')">
       <div class="kicker">— Rangers Lead the Way —</div>
-      <h1>MILHQ Roster</h1>
-      <p>Chain of command and active duty roster.</p>
+      <h1>MILHQ • Command Structure</h1>
+      <p>Chain of command, unit leadership, and company organization.</p>
       <div class="cta">
         <a class="btn btn--primary" href="enlist.html">Enlist Today</a>
-        <a class="btn btn--ghost" href="about.html">Learn More</a>
-        <span class="tag">Arma</span>
-        <span class="tag">Realism</span>
-        <span class="tag">Training Pipeline</span>
-        <span class="tag">TeamSpeak + Discord</span>
+        <a class="btn btn--ghost" href="#roster">Jump to Roster</a>
+        <span class="tag">MILSIM</span>
+        <span class="tag">Chain of Command</span>
+        <span class="tag">Roster</span>
       </div>
     </section>
 
-    
-<section class="panel">
-  <h2>Roster</h2>
-  <p style="margin:0;color:var(--muted);font-weight:650">Replace this section with your roster list.</p>
-</section>
+    <!-- QUICK STATS -->
+    <section class="panel">
+      <h2>Current Strength</h2>
+      <div class="grid4">
+        <div class="stat"><div class="num">1</div><div class="lbl">Battalion HQ</div></div>
+        <div class="stat"><div class="num">3</div><div class="lbl">Companies</div></div>
+        <div class="stat"><div class="num">6</div><div class="lbl">Platoons</div></div>
+        <div class="stat"><div class="num">—</div><div class="lbl">Open Slots</div></div>
+      </div>
+    </section>
 
+    <!-- CHAIN OF COMMAND -->
+    <section class="panel">
+      <h2>Chain of Command</h2>
 
-    
-<footer class="footer">
-  <div>© 7-75th Ranger Regiment • Hosted on GitHub Pages.</div>
-  <div class="footer__links">
-    <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Terms</a>
-    <a href="contact.html">Contact</a>
-  </div>
-</footer>
+      <div class="cocGrid">
+        <div class="cocCard">
+          <div class="cocRole">Battalion Commander</div>
+          <div class="cocName">VACANT / TBA</div>
+          <div class="cocMeta">O-5 • Battalion HQ</div>
+        </div>
+
+        <div class="cocCard">
+          <div class="cocRole">Executive Officer</div>
+          <div class="cocName">VACANT / TBA</div>
+          <div class="cocMeta">O-4 • Battalion HQ</div>
+        </div>
+
+        <div class="cocCard">
+          <div class="cocRole">Command Sergeant Major</div>
+          <div class="cocName">VACANT / TBA</div>
+          <div class="cocMeta">E-9 • Battalion HQ</div>
+        </div>
+
+        <div class="cocCard">
+          <div class="cocRole">S-1 Admin / Personnel</div>
+          <div class="cocName">VACANT / TBA</div>
+          <div class="cocMeta">Staff • Battalion HQ</div>
+        </div>
+
+        <div class="cocCard">
+          <div class="cocRole">S-3 Operations</div>
+          <div class="cocName">VACANT / TBA</div>
+          <div class="cocMeta">Staff • Battalion HQ</div>
+        </div>
+
+        <div class="cocCard">
+          <div class="cocRole">S-4 Logistics</div>
+          <div class="cocName">VACANT / TBA</div>
+          <div class="cocMeta">Staff • Battalion HQ</div>
+        </div>
+      </div>
+
+      <div class="note">
+        Tip: replace “VACANT / TBA” with player names + rank once you’re ready.
+      </div>
+    </section>
+
+    <!-- COMPANY STRUCTURE -->
+    <section class="panel" id="roster">
+      <h2>Company Organization</h2>
+
+      <div class="orgGrid">
+
+        <article class="orgCard">
+          <header class="orgHeader">
+            <div class="orgTitle">Alpha Company</div>
+            <div class="orgSub">Direct Action • CQB • Raids</div>
+          </header>
+
+          <div class="orgRow">
+            <div class="orgSlot">
+              <div class="slotRole">CO</div><div class="slotName">VACANT</div><div class="slotMeta">O-3</div>
+            </div>
+            <div class="orgSlot">
+              <div class="slotRole">1SG</div><div class="slotName">VACANT</div><div class="slotMeta">E-8</div>
+            </div>
+          </div>
+
+          <div class="orgTableWrap">
+            <table class="orgTable">
+              <thead><tr><th>Platoon</th><th>Role</th><th>Name</th><th>Rank</th></tr></thead>
+              <tbody>
+                <tr><td>1st PLT</td><td>PL</td><td>VACANT</td><td>O-2</td></tr>
+                <tr><td>1st PLT</td><td>PSG</td><td>VACANT</td><td>E-7</td></tr>
+                <tr><td>2nd PLT</td><td>PL</td><td>VACANT</td><td>O-2</td></tr>
+                <tr><td>2nd PLT</td><td>PSG</td><td>VACANT</td><td>E-7</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="orgCard">
+          <header class="orgHeader">
+            <div class="orgTitle">Bravo Company</div>
+            <div class="orgSub">Recon • Overwatch • ISR</div>
+          </header>
+
+          <div class="orgRow">
+            <div class="orgSlot">
+              <div class="slotRole">CO</div><div class="slotName">VACANT</div><div class="slotMeta">O-3</div>
+            </div>
+            <div class="orgSlot">
+              <div class="slotRole">1SG</div><div class="slotName">VACANT</div><div class="slotMeta">E-8</div>
+            </div>
+          </div>
+
+          <div class="orgTableWrap">
+            <table class="orgTable">
+              <thead><tr><th>Platoon</th><th>Role</th><th>Name</th><th>Rank</th></tr></thead>
+              <tbody>
+                <tr><td>1st PLT</td><td>PL</td><td>VACANT</td><td>O-2</td></tr>
+                <tr><td>1st PLT</td><td>PSG</td><td>VACANT</td><td>E-7</td></tr>
+                <tr><td>2nd PLT</td><td>PL</td><td>VACANT</td><td>O-2</td></tr>
+                <tr><td>2nd PLT</td><td>PSG</td><td>VACANT</td><td>E-7</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="orgCard">
+          <header class="orgHeader">
+            <div class="orgTitle">Charlie Company</div>
+            <div class="orgSub">Support • QRF • Heavy Weapons</div>
+          </header>
+
+          <div class="orgRow">
+            <div class="orgSlot">
+              <div class="slotRole">CO</div><div class="slotName">VACANT</div><div class="slotMeta">O-3</div>
+            </div>
+            <div class="orgSlot">
+              <div class="slotRole">1SG</div><div class="slotName">VACANT</div><div class="slotMeta">E-8</div>
+            </div>
+          </div>
+
+          <div class="orgTableWrap">
+            <table class="orgTable">
+              <thead><tr><th>Element</th><th>Role</th><th>Name</th><th>Rank</th></tr></thead>
+              <tbody>
+                <tr><td>Weapons</td><td>OIC</td><td>VACANT</td><td>O-2</td></tr>
+                <tr><td>Weapons</td><td>NCOIC</td><td>VACANT</td><td>E-7</td></tr>
+                <tr><td>QRF</td><td>Lead</td><td>VACANT</td><td>E-6</td></tr>
+                <tr><td>QRF</td><td>Medic</td><td>VACANT</td><td>E-4</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>© 7-75th Ranger Regiment • Hosted on GitHub Pages.</div>
+      <div class="footer__links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </footer>
 
   </section>
 </main>
+
 <script src="main.js" defer></script>
 </body>
 </html>
