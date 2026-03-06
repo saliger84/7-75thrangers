@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7-75th Rangers | Calendar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="calendar.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <div class="camo-overlay"></div>
+
+    <header class="site-header">
+      <div class="container nav-inner">
+        <div class="brand">
+          <div class="brand-mark"></div>
+          <span>7-75th Ranger Regiment</span>
+        </div>
+
+        <nav class="main-nav">
+          <a href="#">Forum</a>
+          <a href="#">About Us</a>
+          <a href="#" class="active">Calendar</a>
+          <a href="#">MILHQ</a>
+        </nav>
+
+        <div class="nav-user">
+          <div class="brand-mark small"></div>
+          <span>saliger</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="container calendar-page">
+      <section class="calendar-frame">
+        <div class="toolbar">
+          <button class="toolbar-select">All Calendars <span>▾</span></button>
+          <button class="toolbar-view">Week</button>
+        </div>
+
+        <div class="month-strip">
+          <button class="nav-arrow" id="prevMonth">←</button>
+          <h1 id="monthLabel">March 2026</h1>
+          <button class="nav-arrow" id="nextMonth">→</button>
+        </div>
+
+        <div class="calendar-grid" id="calendarGrid">
+          <div class="weekday">MON</div>
+          <div class="weekday">TUE</div>
+          <div class="weekday">WED</div>
+          <div class="weekday">THU</div>
+          <div class="weekday">FRI</div>
+          <div class="weekday">SAT</div>
+          <div class="weekday">SUN</div>
+        </div>
+      </section>
+
+      <div class="calendar-footer">Powered by forumify</div>
+    </main>
+  </div>
+
+  <script src="calendar.js"></script>
+</body>
+</html>
