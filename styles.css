@@ -1,8 +1,3 @@
-/* =========================================================
-   7-75th Ranger Regiment — Mirror layout (3rdinf-style)
-   Drop-in replacement: index.html + styles.css
-   ========================================================= */
-
 /* ---------- Base ---------- */
 :root{
   --bg0:#0e1114;
@@ -528,3 +523,4 @@ body::before{
   height: 420px;                     /* both SAME height */
   background:#1b1f24;
   border:1px solid rgba(255,255,255,.08
+}
