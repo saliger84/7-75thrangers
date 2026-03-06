@@ -3,109 +3,177 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Calendar • 7-75th</title>
+  <title>Calendar | 7-75th Ranger Regiment</title>
   <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
 
 <header class="topbar">
-  <a class="brand" href="index.html">
-    <img src="logo.svg" alt="Logo" class="brand__logo">
-    <div>
-      <div class="brand__title">7-75th Ranger</div>
-      <div class="brand__sub">Regiment</div>
-    </div>
-  </a>
-
-  <nav class="nav">
-    <a href="forum.html">Forum</a>
-    <a href="about.html">About Us</a>
-    <a href="calendar.html">Calendar</a>
-    <div class="dropdown">
-      <button class="dropbtn" type="button">MILHQ ▾</button>
-      <div class="dropdown-menu">
-        <a href="roster.html">Roster</a>
-        <a href="ranks.html">Ranks</a>
-        <a href="awards.html">Awards</a>
+  <div class="topbar-inner">
+    <a class="brand" href="index.html" aria-label="Home">
+      <img class="brand-mark" src="logo.svg" alt="">
+      <div class="brand-stack">
+        <span class="brand-text">7-75th Ranger Regiment</span>
+        <span class="brand-sub">Realism Unit</span>
       </div>
-    </div>
-    <a class="nav__btn" href="login.html">Login</a>
-  </nav>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="forum.html">Forum</a>
+      <a href="about.html">About Us</a>
+      <a href="calendar.html" class="active">Calendar</a>
+
+      <div class="drop">
+        <button class="drop-btn" type="button" aria-haspopup="true" aria-expanded="false">
+          MILHQ <span class="chev">▾</span>
+        </button>
+        <div class="drop-menu" role="menu">
+          <a role="menuitem" href="milhq_command.html">Command</a>
+          <a role="menuitem" href="ranks.html">Ranks</a>
+          <a role="menuitem" href="roster.html">Roster</a>
+          <a role="menuitem" href="awards.html">Awards</a>
+          <a role="menuitem" href="training.html">Training</a>
+        </div>
+      </div>
+
+      <a class="login-btn" href="login.html">Login</a>
+    </nav>
+  </div>
 </header>
 
-<main class="shell">
-  
-<aside class="sidebar">
-  <section class="sidecard">
-    <div class="sidecard__title">1 | FORT STEWART</div>
-    <a class="" href="index.html"><img src="icon_forum.png" alt="">Home</a>
-    <a class="" href="news.html"><img src="icon_forum.png" alt="">News</a>
-    <a class="active" href="calendar.html"><img src="icon_calendar.png" alt="">Calendar</a>
-    <a class="" href="enlist.html"><img src="icon_training.png" alt="">Enlist</a>
-  </section>
+<main class="shell calendar-shell">
 
-  <section class="sidecard">
-    <div class="sidecard__title">2 | MILHQ</div>
-    <a class="" href="roster.html"><img src="icon_roster.png" alt="">Roster</a>
-    <a class="" href="awards.html"><img src="icon_awards.png" alt="">Awards</a>
-    <a class="" href="ranks.html"><img src="icon_ranks.png" alt="">Ranks</a>
-  </section>
+  <section class="calendar-wrap">
 
-  <section class="sidecard">
-    <div class="sidecard__title">3 | UNIT RESOURCES</div>
-    <a class="" href="training.html"><img src="icon_training.png" alt="">Training & Schools</a>
-    <a class="" href="twitch.html"><img src="icon_twitch.png" alt="">Twitch</a>
-    <a class="" href="donations.html"><img src="icon_discord.png" alt="">Donations</a>
-    <a class="" href="forum.html"><img src="icon_forum.png" alt="">Forum</a>
-  </section>
+    <div class="calendar-toolbar">
+      <button class="calendar-filter">▦&nbsp;&nbsp;All Calendars <span>▾</span></button>
+      <div class="calendar-view">◷&nbsp;&nbsp;Week</div>
+    </div>
 
-  <div class="sidepillrow">
-    <span class="pill">Time Zone: CST</span>
-    <span class="pill">TeamSpeak</span>
-  </div>
-</aside>
+    <div class="calendar-monthbar">
+      <button class="month-arrow" aria-label="Previous month">←</button>
+      <div class="month-title">March 2026</div>
+      <button class="month-arrow" aria-label="Next month">→</button>
+    </div>
 
-  <section class="content">
-    <section class="hero" style="--hero:url('hero_calendar.jpg')">
-      <div class="kicker">— Rangers Lead the Way —</div>
-      <h1>Operations Calendar</h1>
-      <p>Schedules, operations, drills, and special events.</p>
-      <div class="cta">
-        <a class="btn btn--primary" href="enlist.html">Enlist Today</a>
-        <a class="btn btn--ghost" href="about.html">Learn More</a>
-        <span class="tag">Arma</span>
-        <span class="tag">Realism</span>
-        <span class="tag">Training Pipeline</span>
-        <span class="tag">TeamSpeak + Discord</span>
+    <div class="calendar-grid">
+      <div class="weekday">MON</div>
+      <div class="weekday">TUE</div>
+      <div class="weekday">WED</div>
+      <div class="weekday">THU</div>
+      <div class="weekday">FRI</div>
+      <div class="weekday">SAT</div>
+      <div class="weekday">SUN</div>
+
+      <!-- Week 1 -->
+      <div class="day muted"><div class="date">23</div></div>
+      <div class="day muted"><div class="date">24</div></div>
+      <div class="day muted"><div class="date">25</div></div>
+      <div class="day muted">
+        <div class="date">26</div>
+        <div class="event purple">16:59 Platoon Report Due Date</div>
       </div>
-    </section>
+      <div class="day muted"><div class="date">27</div></div>
+      <div class="day muted">
+        <div class="date">28</div>
+        <div class="event gold">09:00 Promotion Board</div>
+        <div class="event green">14:00 Squad Drills</div>
+      </div>
+      <div class="day muted">
+        <div class="date">1</div>
+        <div class="event red">14:00 Field Training Exercise (FTX)</div>
+      </div>
 
-    
-<section class="panel">
-  <h2>Operations Calendar</h2>
-  <table class="table">
-    <thead><tr><th>Day</th><th>Event</th><th>Time (CST)</th><th>Notes</th></tr></thead>
-    <tbody>
-      <tr><td>Sun</td><td>Sunday Operation</td><td>1900</td><td>Main unit op (attendance tracked)</td></tr>
-      <tr><td>Wed</td><td>Squad Drill</td><td>2000</td><td>Leadership coaching & refresh</td></tr>
-      <tr><td>Fri</td><td>Open Server Night</td><td>2000</td><td>Mods / loadouts / warmups</td></tr>
-    </tbody>
-  </table>
-</section>
+      <!-- Week 2 -->
+      <div class="day"><div class="date">2</div></div>
+      <div class="day"><div class="date">3</div></div>
+      <div class="day"><div class="date">4</div></div>
+      <div class="day"><div class="date">5</div></div>
+      <div class="day current">
+        <div class="date current-date">6</div>
+      </div>
+      <div class="day">
+        <div class="date">7</div>
+        <div class="event green">14:00 Squad Drills</div>
+      </div>
+      <div class="day">
+        <div class="date">8</div>
+        <div class="event gold">10:00 Flag Meeting</div>
+        <div class="event blue">12:00 Unit Award Ceremony</div>
+        <div class="event red">14:00 Field Training Exercise (FTX)</div>
+      </div>
 
+      <!-- Week 3 -->
+      <div class="day"><div class="date">9</div></div>
+      <div class="day"><div class="date">10</div></div>
+      <div class="day"><div class="date">11</div></div>
+      <div class="day"><div class="date">12</div></div>
+      <div class="day"><div class="date">13</div></div>
+      <div class="day">
+        <div class="date">14</div>
+        <div class="event gold">10:00 Warrior Leadership Course 26-01</div>
+        <div class="event green">14:00 Squad Drills</div>
+      </div>
+      <div class="day">
+        <div class="date">15</div>
+        <div class="event red">14:00 Field Training Exercise (FTX)</div>
+      </div>
 
-    
-<footer class="footer">
-  <div>© 7-75th Ranger Regiment • Hosted on GitHub Pages.</div>
-  <div class="footer__links">
-    <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Terms</a>
-    <a href="contact.html">Contact</a>
-  </div>
-</footer>
+      <!-- Week 4 -->
+      <div class="day"><div class="date">16</div></div>
+      <div class="day"><div class="date">17</div></div>
+      <div class="day"><div class="date">18</div></div>
+      <div class="day"><div class="date">19</div></div>
+      <div class="day"><div class="date">20</div></div>
+      <div class="day">
+        <div class="date">21</div>
+        <div class="event gold">12:00 NCO Meeting</div>
+        <div class="event green">14:00 Squad Drills</div>
+      </div>
+      <div class="day">
+        <div class="date">22</div>
+        <div class="event red">14:00 Field Training Exercise (FTX)</div>
+      </div>
 
+      <!-- Week 5 -->
+      <div class="day"><div class="date">23</div></div>
+      <div class="day"><div class="date">24</div></div>
+      <div class="day"><div class="date">25</div></div>
+      <div class="day">
+        <div class="date">26</div>
+        <div class="event purple">17:59 Platoon Report Due Date</div>
+      </div>
+      <div class="day"><div class="date">27</div></div>
+      <div class="day">
+        <div class="date">28</div>
+        <div class="event gold">10:00 Promotion Board</div>
+        <div class="event green">14:00 Squad Drills</div>
+      </div>
+      <div class="day">
+        <div class="date">29</div>
+        <div class="event red">14:00 Field Training Exercise (FTX)</div>
+      </div>
+
+      <!-- Week 6 -->
+      <div class="day"><div class="date">30</div></div>
+      <div class="day"><div class="date">31</div></div>
+      <div class="day muted"><div class="date">1</div></div>
+      <div class="day muted"><div class="date">2</div></div>
+      <div class="day muted"><div class="date">3</div></div>
+      <div class="day muted">
+        <div class="date">4</div>
+        <div class="event green">14:00 Squad Drills</div>
+      </div>
+      <div class="day muted">
+        <div class="date">5</div>
+        <div class="event blue">12:00 Unit Award Ceremony</div>
+        <div class="event red">14:00 Field Training Exercise (FTX)</div>
+      </div>
+    </div>
+
+    <div class="calendar-powered">Powered by forumify</div>
   </section>
+
 </main>
-<script src="main.js" defer></script>
 </body>
 </html>
