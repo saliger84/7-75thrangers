@@ -1,20 +1,32 @@
-<header class="site-header">
-  <div class="container nav-inner">
-    <a href="index.html" class="brand">
-      <div class="brand-mark"></div>
-      <span>7-75th Ranger Regiment</span>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html" aria-label="Home">
+      <img class="brand-mark" src="logo.svg" alt="">
+      <div class="brand-stack">
+        <span class="brand-text">7-75th Ranger Regiment</span>
+        <span class="brand-sub">Realism Unit</span>
+      </div>
     </a>
 
-    <nav class="main-nav">
-      <a href="forum.html">Forum</a>
-      <a href="about.html">About Us</a>
-      <a href="calendar.html">Calendar</a>
-      <a href="milhq_command.html">MILHQ</a>
-    </nav>
+    <nav class="nav" aria-label="Primary">
+      <a class="" href="forum.html">Forum</a>
+      <a class="" href="about.html">About Us</a>
+      <a class="" href="calendar.html">Calendar</a>
 
-    <div class="nav-user">
-      <div class="brand-mark small"></div>
-      <span>saliger</span>
-    </div>
+      <div class="drop">
+        <button class="drop-btn" type="button" aria-haspopup="true" aria-expanded="false">
+          MILHQ <span class="chev">▾</span>
+        </button>
+        <div class="drop-menu" role="menu">
+          <a role="menuitem" href="roster.html">Roster</a>
+          <a role="menuitem" href="awards.html">Awards</a>
+          <a role="menuitem" href="ranks.html">Ranks</a>
+          <a role="menuitem" href="enlist.html" class="menu-highlight">Enlist</a>
+        </div>
+      </div>
+
+      <a class="login-btn " href="login.html">Login</a>
+    </nav>
   </div>
 </header>

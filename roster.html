@@ -3,249 +3,76 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>MILHQ • 7-75th</title>
+  <title>Roster • 7-75th</title>
   <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
 
 <header class="topbar">
-  <a class="brand" href="index.html">
-    <img src="logo.svg" alt="Logo" class="brand__logo">
-    <div>
-      <div class="brand__title">7-75th Ranger</div>
-      <div class="brand__sub">Regiment</div>
-    </div>
-  </a>
-
-  <nav class="nav">
-    <a href="forum.html">Forum</a>
-    <a href="about.html">About Us</a>
-    <a href="calendar.html">Calendar</a>
-
-    <div class="dropdown">
-      <button class="dropbtn" type="button">MILHQ ▾</button>
-      <div class="dropdown-menu">
-        <a href="roster.html">Roster</a>
-        <a href="ranks.html">Ranks</a>
-        <a href="awards.html">Awards</a>
+  <div class="topbar-inner">
+    <a class="brand" href="index.html" aria-label="Home">
+      <img class="brand-mark" src="logo.svg" alt="">
+      <div class="brand-stack">
+        <span class="brand-text">7-75th Ranger Regiment</span>
+        <span class="brand-sub">Realism Unit</span>
       </div>
-    </div>
+    </a>
 
-    <a class="nav__btn" href="login.html">Login</a>
-  </nav>
+    <nav class="nav" aria-label="Primary">
+      <a class="" href="forum.html">Forum</a>
+      <a class="active" href="about.html">About Us</a>
+      <a class="" href="calendar.html">Calendar</a>
+
+      <div class="drop">
+        <button class="drop-btn" type="button" aria-haspopup="true" aria-expanded="false">
+          MILHQ <span class="chev">▾</span>
+        </button>
+        <div class="drop-menu" role="menu">
+          <a role="menuitem" href="roster.html">Roster</a>
+          <a role="menuitem" href="awards.html">Awards</a>
+          <a role="menuitem" href="ranks.html">Ranks</a>
+          <a role="menuitem" href="enlist.html" class="menu-highlight">Enlist</a>
+        </div>
+      </div>
+
+      <a class="login-btn " href="login.html">Login</a>
+    </nav>
+  </div>
 </header>
-
-<main class="shell">
-  <!-- LEFT SIDEBAR -->
-  <aside class="sidebar">
-    <section class="sidecard">
-      <div class="sidecard__title">1 | FORT STEWART</div>
-      <a href="index.html"><img src="icon_forum.png" alt="">Home</a>
-      <a href="news.html"><img src="icon_forum.png" alt="">News</a>
-      <a href="calendar.html"><img src="icon_calendar.png" alt="">Calendar</a>
-      <a href="enlist.html"><img src="icon_training.png" alt="">Enlist</a>
-    </section>
-
-    <section class="sidecard">
-      <div class="sidecard__title">2 | MILHQ</div>
-      <a class="active" href="roster.html"><img src="icon_roster.png" alt="">Roster</a>
-      <a href="awards.html"><img src="icon_awards.png" alt="">Awards</a>
-      <a href="ranks.html"><img src="icon_ranks.png" alt="">Ranks</a>
-    </section>
-
-    <section class="sidecard">
-      <div class="sidecard__title">3 | UNIT RESOURCES</div>
-      <a href="training.html"><img src="icon_training.png" alt="">Training & Schools</a>
-      <a href="twitch.html"><img src="icon_twitch.png" alt="">Twitch</a>
-      <a href="donations.html"><img src="icon_discord.png" alt="">Donations</a>
-      <a href="forum.html"><img src="icon_forum.png" alt="">Forum</a>
-    </section>
-
-    <div class="sidepillrow">
-      <span class="pill">Time Zone: CST</span>
-      <span class="pill">Ops: Weekly</span>
-    </div>
-  </aside>
-
-  <!-- MAIN CONTENT -->
-  <section class="content">
-
-    <section class="hero" style="--hero:url('hero_milhq.jpg')">
-      <div class="kicker">— Rangers Lead the Way —</div>
-      <h1>MILHQ • Command Structure</h1>
-      <p>Chain of command, unit leadership, and company organization.</p>
-      <div class="cta">
-        <a class="btn btn--primary" href="enlist.html">Enlist Today</a>
-        <a class="btn btn--ghost" href="#roster">Jump to Roster</a>
-        <span class="tag">MILSIM</span>
-        <span class="tag">Chain of Command</span>
-        <span class="tag">Roster</span>
-      </div>
-    </section>
-
-    <!-- QUICK STATS -->
-    <section class="panel">
-      <h2>Current Strength</h2>
-      <div class="grid4">
-        <div class="stat"><div class="num">1</div><div class="lbl">Battalion HQ</div></div>
-        <div class="stat"><div class="num">3</div><div class="lbl">Companies</div></div>
-        <div class="stat"><div class="num">6</div><div class="lbl">Platoons</div></div>
-        <div class="stat"><div class="num">—</div><div class="lbl">Open Slots</div></div>
-      </div>
-    </section>
-
-    <!-- CHAIN OF COMMAND -->
-    <section class="panel">
-      <h2>Chain of Command</h2>
-
-      <div class="cocGrid">
-        <div class="cocCard">
-          <div class="cocRole">Battalion Commander</div>
-          <div class="cocName">VACANT / TBA</div>
-          <div class="cocMeta">O-5 • Battalion HQ</div>
-        </div>
-
-        <div class="cocCard">
-          <div class="cocRole">Executive Officer</div>
-          <div class="cocName">VACANT / TBA</div>
-          <div class="cocMeta">O-4 • Battalion HQ</div>
-        </div>
-
-        <div class="cocCard">
-          <div class="cocRole">Command Sergeant Major</div>
-          <div class="cocName">VACANT / TBA</div>
-          <div class="cocMeta">E-9 • Battalion HQ</div>
-        </div>
-
-        <div class="cocCard">
-          <div class="cocRole">S-1 Admin / Personnel</div>
-          <div class="cocName">VACANT / TBA</div>
-          <div class="cocMeta">Staff • Battalion HQ</div>
-        </div>
-
-        <div class="cocCard">
-          <div class="cocRole">S-3 Operations</div>
-          <div class="cocName">VACANT / TBA</div>
-          <div class="cocMeta">Staff • Battalion HQ</div>
-        </div>
-
-        <div class="cocCard">
-          <div class="cocRole">S-4 Logistics</div>
-          <div class="cocName">VACANT / TBA</div>
-          <div class="cocMeta">Staff • Battalion HQ</div>
+<main class="shell shell--inner">
+  <div class="page-grid">
+    <aside class="sidebar">
+      <section class="sidecard"><div class="sidecard__title">1 | FORT STEWART</div><a class="" href="index.html"><img src="icon_forum.png" alt="">Home</a>
+<a class="" href="news.html"><img src="icon_forum.png" alt="">News</a>
+<a class="" href="calendar.html"><img src="icon_calendar.png" alt="">Calendar</a>
+<a class="" href="enlist.html"><img src="icon_roster.png" alt="">Enlist</a></section>
+      <section class="sidecard"><div class="sidecard__title">2 | MILHQ</div><a class="active" href="roster.html"><img src="icon_roster.png" alt="">Roster</a>
+<a class="" href="awards.html"><img src="icon_awards.png" alt="">Awards</a>
+<a class="" href="ranks.html"><img src="icon_ranks.png" alt="">Ranks</a></section>
+      <section class="sidecard"><div class="sidecard__title">3 | UNIT RESOURCES</div><a class="" href="donations.html"><img src="icon_discord.png" alt="">Donations</a>
+<a class="" href="twitch.html"><img src="icon_twitch.png" alt="">Twitch</a>
+<a class="" href="forum.html"><img src="icon_forum.png" alt="">Forum</a></section>
+      <div class="sidepillrow"><span class="pill">Time Zone: CST</span><span class="pill">TeamSpeak</span></div>
+    </aside>
+    <section class="content">
+      <section class="subhero" style="--hero:url('hero_milhq.jpg')">
+      <div class="subhero-shade"></div>
+      <div class="subhero-content">
+        <div class="kicker">— Rangers Lead the Way —</div>
+        <h1>MILHQ • Roster</h1>
+        <p>Personnel files, administrative positions, and retired roster records.</p>
+        <div class="cta">
+          <a class="btn btn--primary" href="enlist.html">Enlist Today</a>
+          <a class="btn btn--ghost" href="roster.html">Jump to Roster</a>
+          <span class="tag">MILHQ</span><span class="tag">Roster</span><span class="tag">Administration</span>
         </div>
       </div>
-
-      <div class="note">
-        Tip: replace “VACANT / TBA” with player names + rank once you’re ready.
-      </div>
     </section>
-
-    <!-- COMPANY STRUCTURE -->
-    <section class="panel" id="roster">
-      <h2>Company Organization</h2>
-
-      <div class="orgGrid">
-
-        <article class="orgCard">
-          <header class="orgHeader">
-            <div class="orgTitle">Alpha Company</div>
-            <div class="orgSub">Direct Action • CQB • Raids</div>
-          </header>
-
-          <div class="orgRow">
-            <div class="orgSlot">
-              <div class="slotRole">CO</div><div class="slotName">VACANT</div><div class="slotMeta">O-3</div>
-            </div>
-            <div class="orgSlot">
-              <div class="slotRole">1SG</div><div class="slotName">VACANT</div><div class="slotMeta">E-8</div>
-            </div>
-          </div>
-
-          <div class="orgTableWrap">
-            <table class="orgTable">
-              <thead><tr><th>Platoon</th><th>Role</th><th>Name</th><th>Rank</th></tr></thead>
-              <tbody>
-                <tr><td>1st PLT</td><td>PL</td><td>VACANT</td><td>O-2</td></tr>
-                <tr><td>1st PLT</td><td>PSG</td><td>VACANT</td><td>E-7</td></tr>
-                <tr><td>2nd PLT</td><td>PL</td><td>VACANT</td><td>O-2</td></tr>
-                <tr><td>2nd PLT</td><td>PSG</td><td>VACANT</td><td>E-7</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </article>
-
-        <article class="orgCard">
-          <header class="orgHeader">
-            <div class="orgTitle">Bravo Company</div>
-            <div class="orgSub">Recon • Overwatch • ISR</div>
-          </header>
-
-          <div class="orgRow">
-            <div class="orgSlot">
-              <div class="slotRole">CO</div><div class="slotName">VACANT</div><div class="slotMeta">O-3</div>
-            </div>
-            <div class="orgSlot">
-              <div class="slotRole">1SG</div><div class="slotName">VACANT</div><div class="slotMeta">E-8</div>
-            </div>
-          </div>
-
-          <div class="orgTableWrap">
-            <table class="orgTable">
-              <thead><tr><th>Platoon</th><th>Role</th><th>Name</th><th>Rank</th></tr></thead>
-              <tbody>
-                <tr><td>1st PLT</td><td>PL</td><td>VACANT</td><td>O-2</td></tr>
-                <tr><td>1st PLT</td><td>PSG</td><td>VACANT</td><td>E-7</td></tr>
-                <tr><td>2nd PLT</td><td>PL</td><td>VACANT</td><td>O-2</td></tr>
-                <tr><td>2nd PLT</td><td>PSG</td><td>VACANT</td><td>E-7</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </article>
-
-        <article class="orgCard">
-          <header class="orgHeader">
-            <div class="orgTitle">Charlie Company</div>
-            <div class="orgSub">Support • QRF • Heavy Weapons</div>
-          </header>
-
-          <div class="orgRow">
-            <div class="orgSlot">
-              <div class="slotRole">CO</div><div class="slotName">VACANT</div><div class="slotMeta">O-3</div>
-            </div>
-            <div class="orgSlot">
-              <div class="slotRole">1SG</div><div class="slotName">VACANT</div><div class="slotMeta">E-8</div>
-            </div>
-          </div>
-
-          <div class="orgTableWrap">
-            <table class="orgTable">
-              <thead><tr><th>Element</th><th>Role</th><th>Name</th><th>Rank</th></tr></thead>
-              <tbody>
-                <tr><td>Weapons</td><td>OIC</td><td>VACANT</td><td>O-2</td></tr>
-                <tr><td>Weapons</td><td>NCOIC</td><td>VACANT</td><td>E-7</td></tr>
-                <tr><td>QRF</td><td>Lead</td><td>VACANT</td><td>E-6</td></tr>
-                <tr><td>QRF</td><td>Medic</td><td>VACANT</td><td>E-4</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </article>
-
-      </div>
+      <div class="roster-tabs"><button class="tab active" data-view="personnel">Personnel Files</button><button class="tab" data-view="admin">Administrative Positions</button><button class="tab" data-view="retired">Retired</button></div><div id="personnel" class="roster-view active-view"><div class="roster-section"><div class="section-title">First Battalion Headquarters</div><div class="roster-row"><div class="rank-cell"><img src="icon_awards.png" alt=""></div><div class="name-cell">Major John LaFlash</div><div class="role-cell">Battalion Commander</div><div class="status-cell"><span class="status-badge active">ACTIVE DUTY</span></div></div></div><div class="roster-section"><div class="section-title">Alpha Company Headquarters</div><div class="roster-row"><div class="rank-cell"><img src="icon_calendar.png" alt=""></div><div class="name-cell">First Lieutenant Nathan Cooper</div><div class="role-cell">Company Executive Officer</div><div class="status-cell"><span class="status-badge active">ACTIVE DUTY</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_awards.png" alt=""></div><div class="name-cell">First Sergeant Vinny Garcia</div><div class="role-cell">Company First Sergeant</div><div class="status-cell"><span class="status-badge active">ACTIVE DUTY</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_ranks.png" alt=""></div><div class="name-cell">Sergeant Michael Donnelly</div><div class="role-cell">Company Clerk – Intelligence Analyst</div><div class="status-cell"><span class="status-badge active">ACTIVE DUTY</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_roster.png" alt=""></div><div class="name-cell">Private First Class Noah Danvers</div><div class="role-cell">Company Clerk – Intelligence Analyst</div><div class="status-cell"><span class="status-badge active">ACTIVE DUTY</span></div></div></div><div class="roster-section"><div class="section-title">Alpha Company, First Platoon Headquarters</div><div class="roster-row"><div class="rank-cell"><img src="icon_calendar.png" alt=""></div><div class="name-cell">First Lieutenant Chris Winters</div><div class="role-cell">Platoon Leader</div><div class="status-cell"><span class="status-badge active">ACTIVE DUTY</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_awards.png" alt=""></div><div class="name-cell">Sergeant First Class George Nagy</div><div class="role-cell">Platoon Sergeant</div><div class="status-cell"><span class="status-badge active">ACTIVE DUTY</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_ranks.png" alt=""></div><div class="name-cell">Sergeant Drew Schneider</div><div class="role-cell">Platoon Medic</div><div class="status-cell"><span class="status-badge active">ACTIVE DUTY</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_ranks.png" alt=""></div><div class="name-cell">Sergeant Jake Starling</div><div class="role-cell">Forward Observer</div><div class="status-cell"><span class="status-badge active">ACTIVE DUTY</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_roster.png" alt=""></div><div class="name-cell">Corporal Liam Meadows</div><div class="role-cell">Assistant Platoon Medic</div><div class="status-cell"><span class="status-badge active">ACTIVE DUTY</span></div></div></div><div class="roster-section"><div class="section-title">Alpha Company, First Platoon, First Squad</div><div class="roster-row"><div class="rank-cell"><img src="icon_ranks.png" alt=""></div><div class="name-cell">Corporal Kolin Grigorov</div><div class="role-cell">Squad Leader</div><div class="status-cell"><span class="status-badge active">ACTIVE DUTY</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_ranks.png" alt=""></div><div class="name-cell">Corporal Anthony Siebens</div><div class="role-cell">Squad Medic</div><div class="status-cell"><span class="status-badge active">ACTIVE DUTY</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_awards.png" alt=""></div><div class="name-cell">Sergeant Hans Jäger</div><div class="role-cell">Fireteam Leader</div><div class="status-cell"><span class="status-badge active">ACTIVE DUTY</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_roster.png" alt=""></div><div class="name-cell">Specialist Tarek Mansour</div><div class="role-cell">Fireteam Member</div><div class="status-cell"><span class="status-badge active">ACTIVE DUTY</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_roster.png" alt=""></div><div class="name-cell">Private Second Class Delbert Jester</div><div class="role-cell">Fireteam Member</div><div class="status-cell"><span class="status-badge active">ACTIVE DUTY</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_roster.png" alt=""></div><div class="name-cell">Private Trainee Felix Ramirez</div><div class="role-cell">Fireteam Member</div><div class="status-cell"><span class="status-badge active">ACTIVE DUTY</span></div></div></div></div><div id="admin" class="roster-view"><div class="roster-section"><div class="section-title">S1 – Recruiting and Retention</div><div class="roster-row"><div class="rank-cell"><img src="icon_calendar.png" alt=""></div><div class="name-cell">Second Lieutenant Jake Fox</div><div class="role-cell">79X – Officer in Charge</div><div class="status-cell"><span class="status-badge active">ACTIVE DUTY</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_awards.png" alt=""></div><div class="name-cell">Sergeant First Class George Nagy</div><div class="role-cell">79X – Non-commissioned Officer in Charge</div><div class="status-cell"><span class="status-badge active">ACTIVE DUTY</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_forum.png" alt=""></div><div class="name-cell">Major John LaFlash</div><div class="role-cell">79T – Master Recruiter</div><div class="status-cell"><span class="status-badge active">ACTIVE DUTY</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_ranks.png" alt=""></div><div class="name-cell">Sergeant Hunter Poynor</div><div class="role-cell">79S – Senior Recruiter</div><div class="status-cell"><span class="status-badge active">ACTIVE DUTY</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_ranks.png" alt=""></div><div class="name-cell">Corporal Dennis Scott</div><div class="role-cell">79S – Senior Recruiter</div><div class="status-cell"><span class="status-badge active">ACTIVE DUTY</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_awards.png" alt=""></div><div class="name-cell">Staff Sergeant Brayden Fitzgerald</div><div class="role-cell">79R – Recruiter</div><div class="status-cell"><span class="status-badge active">ACTIVE DUTY</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_ranks.png" alt=""></div><div class="name-cell">Corporal Brett Bishop</div><div class="role-cell">79R – Recruiter</div><div class="status-cell"><span class="status-badge active">ACTIVE DUTY</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_ranks.png" alt=""></div><div class="name-cell">Corporal Pacino MacTavish</div><div class="role-cell">79R – Recruiter</div><div class="status-cell"><span class="status-badge active">ACTIVE DUTY</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_roster.png" alt=""></div><div class="name-cell">Specialist Benjamin Hansen</div><div class="role-cell">79R – Recruiter</div><div class="status-cell"><span class="status-badge active">ACTIVE DUTY</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_roster.png" alt=""></div><div class="name-cell">Specialist Mohammad Mainu</div><div class="role-cell">79R – Recruiter</div><div class="status-cell"><span class="status-badge loa">LEAVE OF ABSENCE</span></div></div></div><div class="roster-section"><div class="section-title">S2 – Intelligence</div><div class="roster-row"><div class="rank-cell"><img src="icon_forum.png" alt=""></div><div class="name-cell">Major John LaFlash</div><div class="role-cell">35A – Intelligence Officer</div><div class="status-cell"><span class="status-badge active">ACTIVE DUTY</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_calendar.png" alt=""></div><div class="name-cell">First Lieutenant Nathan Cooper</div><div class="role-cell">35A – Intelligence Officer</div><div class="status-cell"><span class="status-badge active">ACTIVE DUTY</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_forum.png" alt=""></div><div class="name-cell">Captain Alexander Vandle</div><div class="role-cell">35D – Senior Intelligence Analyst</div><div class="status-cell"><span class="status-badge loa">LEAVE OF ABSENCE</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_ranks.png" alt=""></div><div class="name-cell">Sergeant Michael Donnelly</div><div class="role-cell">35F – Intelligence Analyst</div><div class="status-cell"><span class="status-badge active">ACTIVE DUTY</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_roster.png" alt=""></div><div class="name-cell">Private First Class Noah Danvers</div><div class="role-cell">35F – Intelligence Analyst</div><div class="status-cell"><span class="status-badge active">ACTIVE DUTY</span></div></div></div><div class="roster-section"><div class="section-title">S3 – Operations – Force Improvement Group</div><div class="roster-row"><div class="rank-cell"><img src="icon_calendar.png" alt=""></div><div class="name-cell">Second Lieutenant Jordan Duck</div><div class="role-cell">11X – Officer in Charge</div><div class="status-cell"><span class="status-badge active">ACTIVE DUTY</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_awards.png" alt=""></div><div class="name-cell">Staff Sergeant Brayden Fitzgerald</div><div class="role-cell">11X – Non-commissioned Officer in Charge</div><div class="status-cell"><span class="status-badge active">ACTIVE DUTY</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_forum.png" alt=""></div><div class="name-cell">Major John LaFlash</div><div class="role-cell">11AH – Administrative Cadre</div><div class="status-cell"><span class="status-badge active">ACTIVE DUTY</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_forum.png" alt=""></div><div class="name-cell">Captain Alexander Vandle</div><div class="role-cell">11AH – Administrative Cadre</div><div class="status-cell"><span class="status-badge loa">LEAVE OF ABSENCE</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_calendar.png" alt=""></div><div class="name-cell">Second Lieutenant Jake Fox</div><div class="role-cell">11AH – Administrative Cadre</div><div class="status-cell"><span class="status-badge active">ACTIVE DUTY</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_awards.png" alt=""></div><div class="name-cell">First Sergeant Vinny Garcia</div><div class="role-cell">11AH – Administrative Cadre</div><div class="status-cell"><span class="status-badge active">ACTIVE DUTY</span></div></div></div></div><div id="retired" class="roster-view"><div class="roster-section"><div class="section-title">Retired</div><div class="roster-row"><div class="rank-cell"><img src="icon_forum.png" alt=""></div><div class="name-cell">Major Arthur Contu</div><div class="role-cell">Retired</div><div class="status-cell"><span class="status-badge retired">RETIRED</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_forum.png" alt=""></div><div class="name-cell">Major Dana Contu</div><div class="role-cell">Retired</div><div class="status-cell"><span class="status-badge retired">RETIRED</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_forum.png" alt=""></div><div class="name-cell">Major Douglas Lipnitz</div><div class="role-cell">Retired</div><div class="status-cell"><span class="status-badge retired">RETIRED</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_calendar.png" alt=""></div><div class="name-cell">Captain Daniel Hardy</div><div class="role-cell">Retired</div><div class="status-cell"><span class="status-badge retired">RETIRED</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_calendar.png" alt=""></div><div class="name-cell">Captain Denny Strickland</div><div class="role-cell">Retired</div><div class="status-cell"><span class="status-badge retired">RETIRED</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_calendar.png" alt=""></div><div class="name-cell">Captain Eric McGuffey</div><div class="role-cell">Retired</div><div class="status-cell"><span class="status-badge retired">RETIRED</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_ranks.png" alt=""></div><div class="name-cell">First Lieutenant Brian Boville</div><div class="role-cell">Retired</div><div class="status-cell"><span class="status-badge retired">RETIRED</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_ranks.png" alt=""></div><div class="name-cell">Second Lieutenant Jon Erickson</div><div class="role-cell">Retired</div><div class="status-cell"><span class="status-badge retired">RETIRED</span></div></div><div class="roster-row"><div class="rank-cell"><img src="icon_awards.png" alt=""></div><div class="name-cell">Command Sergeant Major Elgin Gilmore</div><div class="role-cell">Retired</div><div class="status-cell"><span class="status-badge retired">RETIRED</span></div></div></div></div>
+      <footer class="footer footer--inner"><div>© 7-75th Ranger Regiment • Hosted on GitHub Pages.</div><div class="footer__links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a></div></footer>
     </section>
-
-    <footer class="footer">
-      <div>© 7-75th Ranger Regiment • Hosted on GitHub Pages.</div>
-      <div class="footer__links">
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </footer>
-
-  </section>
+  </div>
 </main>
-
 <script src="main.js" defer></script>
 </body>
 </html>

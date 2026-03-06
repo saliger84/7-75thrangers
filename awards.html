@@ -9,95 +9,69 @@
 <body>
 
 <header class="topbar">
-  <a class="brand" href="index.html">
-    <img src="logo.svg" alt="Logo" class="brand__logo">
-    <div>
-      <div class="brand__title">7-75th Ranger</div>
-      <div class="brand__sub">Regiment</div>
-    </div>
-  </a>
-
-  <nav class="nav">
-    <a href="forum.html">Forum</a>
-    <a href="about.html">About Us</a>
-    <a href="calendar.html">Calendar</a>
-    <div class="dropdown">
-      <button class="dropbtn" type="button">MILHQ ▾</button>
-      <div class="dropdown-menu">
-        <a href="roster.html">Roster</a>
-        <a href="ranks.html">Ranks</a>
-        <a href="awards.html">Awards</a>
+  <div class="topbar-inner">
+    <a class="brand" href="index.html" aria-label="Home">
+      <img class="brand-mark" src="logo.svg" alt="">
+      <div class="brand-stack">
+        <span class="brand-text">7-75th Ranger Regiment</span>
+        <span class="brand-sub">Realism Unit</span>
       </div>
-    </div>
-    <a class="nav__btn" href="login.html">Login</a>
-  </nav>
-</header>
+    </a>
 
-<main class="shell">
-  
-<aside class="sidebar">
-  <section class="sidecard">
-    <div class="sidecard__title">1 | FORT STEWART</div>
-    <a class="" href="index.html"><img src="icon_forum.png" alt="">Home</a>
-    <a class="" href="news.html"><img src="icon_forum.png" alt="">News</a>
-    <a class="" href="calendar.html"><img src="icon_calendar.png" alt="">Calendar</a>
-    <a class="" href="enlist.html"><img src="icon_training.png" alt="">Enlist</a>
-  </section>
+    <nav class="nav" aria-label="Primary">
+      <a class="" href="forum.html">Forum</a>
+      <a class="active" href="about.html">About Us</a>
+      <a class="" href="calendar.html">Calendar</a>
 
-  <section class="sidecard">
-    <div class="sidecard__title">2 | MILHQ</div>
-    <a class="" href="roster.html"><img src="icon_roster.png" alt="">Roster</a>
-    <a class="active" href="awards.html"><img src="icon_awards.png" alt="">Awards</a>
-    <a class="" href="ranks.html"><img src="icon_ranks.png" alt="">Ranks</a>
-  </section>
+      <div class="drop">
+        <button class="drop-btn" type="button" aria-haspopup="true" aria-expanded="false">
+          MILHQ <span class="chev">▾</span>
+        </button>
+        <div class="drop-menu" role="menu">
+          <a role="menuitem" href="roster.html">Roster</a>
+          <a role="menuitem" href="awards.html">Awards</a>
+          <a role="menuitem" href="ranks.html">Ranks</a>
+          <a role="menuitem" href="enlist.html" class="menu-highlight">Enlist</a>
+        </div>
+      </div>
 
-  <section class="sidecard">
-    <div class="sidecard__title">3 | UNIT RESOURCES</div>
-    <a class="" href="training.html"><img src="icon_training.png" alt="">Training & Schools</a>
-    <a class="" href="twitch.html"><img src="icon_twitch.png" alt="">Twitch</a>
-    <a class="" href="donations.html"><img src="icon_discord.png" alt="">Donations</a>
-    <a class="" href="forum.html"><img src="icon_forum.png" alt="">Forum</a>
-  </section>
-
-  <div class="sidepillrow">
-    <span class="pill">Time Zone: CST</span>
-    <span class="pill">TeamSpeak</span>
+      <a class="login-btn " href="login.html">Login</a>
+    </nav>
   </div>
-</aside>
-
-  <section class="content">
-    <section class="hero" style="--hero:url('hero_milhq.jpg')">
-      <div class="kicker">— Rangers Lead the Way —</div>
-      <h1>Awards</h1>
-      <p>Unit ribbons, badges, and recognition.</p>
-      <div class="cta">
-        <a class="btn btn--primary" href="enlist.html">Enlist Today</a>
-        <a class="btn btn--ghost" href="about.html">Learn More</a>
-        <span class="tag">Arma</span>
-        <span class="tag">Realism</span>
-        <span class="tag">Training Pipeline</span>
-        <span class="tag">TeamSpeak + Discord</span>
+</header>
+<main class="shell shell--inner">
+  <div class="page-grid">
+    <aside class="sidebar">
+      <section class="sidecard"><div class="sidecard__title">1 | FORT STEWART</div><a class="" href="index.html"><img src="icon_forum.png" alt="">Home</a>
+<a class="" href="news.html"><img src="icon_forum.png" alt="">News</a>
+<a class="" href="calendar.html"><img src="icon_calendar.png" alt="">Calendar</a>
+<a class="" href="enlist.html"><img src="icon_roster.png" alt="">Enlist</a></section>
+      <section class="sidecard"><div class="sidecard__title">2 | MILHQ</div><a class="" href="roster.html"><img src="icon_roster.png" alt="">Roster</a>
+<a class="active" href="awards.html"><img src="icon_awards.png" alt="">Awards</a>
+<a class="" href="ranks.html"><img src="icon_ranks.png" alt="">Ranks</a></section>
+      <section class="sidecard"><div class="sidecard__title">3 | UNIT RESOURCES</div><a class="" href="donations.html"><img src="icon_discord.png" alt="">Donations</a>
+<a class="" href="twitch.html"><img src="icon_twitch.png" alt="">Twitch</a>
+<a class="" href="forum.html"><img src="icon_forum.png" alt="">Forum</a></section>
+      <div class="sidepillrow"><span class="pill">Time Zone: CST</span><span class="pill">TeamSpeak</span></div>
+    </aside>
+    <section class="content">
+      <section class="subhero" style="--hero:url('hero_milhq.jpg')">
+      <div class="subhero-shade"></div>
+      <div class="subhero-content">
+        <div class="kicker">— Rangers Lead the Way —</div>
+        <h1>Awards</h1>
+        <p>Unit ribbons, badges, and recognition.</p>
+        <div class="cta">
+          <a class="btn btn--primary" href="enlist.html">Enlist Today</a>
+          <a class="btn btn--ghost" href="about.html">Learn More</a>
+          <span class="tag">Awards</span><span class="tag">Decorations</span><span class="tag">Badges</span>
+        </div>
       </div>
     </section>
-
-    
-<section class="panel">
-  <h2>Awards</h2>
-  <p style="margin:0;color:var(--muted);font-weight:650">Add awards, criteria, and images here.</p>
-</section>
-
-
-    
-<footer class="footer">
-  <div>© 7-75th Ranger Regiment • Hosted on GitHub Pages.</div>
-  <div class="footer__links">
-    <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Terms</a>
-    <a href="contact.html">Contact</a>
+      <section class="panel"><h2>Unit Awards & Decorations</h2><div class="award-grid"><article class="award-card"><div class="award-ribbon" style="background:linear-gradient(90deg,#1d4ed8 0 20%,#f8fafc 20% 40%,#dc2626 40% 60%,#f8fafc 60% 80%,#1d4ed8 80% 100%)"></div><div class="award-meta">Command Award</div><h3>Distinguished Service Ribbon</h3><p>Awarded for exceptional service and sustained leadership in high-impact roles.</p></article><article class="award-card"><div class="award-ribbon" style="background:linear-gradient(90deg,#991b1b 0 25%,#fbbf24 25% 50%,#991b1b 50% 75%,#fbbf24 75% 100%)"></div><div class="award-meta">Combat Recognition</div><h3>Valor Commendation</h3><p>Recognition for extraordinary courage, decisiveness, or mission impact under pressure.</p></article><article class="award-card"><div class="award-ribbon" style="background:linear-gradient(90deg,#065f46 0 25%,#f8fafc 25% 50%,#065f46 50% 75%,#f8fafc 75% 100%)"></div><div class="award-meta">Professional Development</div><h3>Training Excellence Ribbon</h3><p>Issued for consistently high performance across schools, drills, and evaluations.</p></article><article class="award-card"><div class="award-ribbon" style="background:linear-gradient(90deg,#111827 0 25%,#9ca3af 25% 50%,#111827 50% 75%,#9ca3af 75% 100%)"></div><div class="award-meta">Qualification Badge</div><h3>Combat Medic Badge</h3><p>Qualification badge for advanced medical training and operational casualty care.</p></article><article class="award-card"><div class="award-ribbon" style="background:linear-gradient(90deg,#92400e 0 25%,#f59e0b 25% 50%,#92400e 50% 75%,#f59e0b 75% 100%)"></div><div class="award-meta">Standards Badge</div><h3>Ranger Tab Qualification</h3><p>Represents completion of demanding standards and assessment requirements.</p></article><article class="award-card"><div class="award-ribbon" style="background:linear-gradient(90deg,#1e3a8a 0 25%,#22c55e 25% 50%,#1e3a8a 50% 75%,#22c55e 75% 100%)"></div><div class="award-meta">Operations Award</div><h3>Campaign Service Ribbon</h3><p>For sustained participation across multiple operations cycles or campaign events.</p></article></div></section>
+      <footer class="footer footer--inner"><div>© 7-75th Ranger Regiment • Hosted on GitHub Pages.</div><div class="footer__links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a></div></footer>
+    </section>
   </div>
-</footer>
-
-  </section>
 </main>
 <script src="main.js" defer></script>
 </body>

@@ -9,95 +9,69 @@
 <body>
 
 <header class="topbar">
-  <a class="brand" href="index.html">
-    <img src="logo.svg" alt="Logo" class="brand__logo">
-    <div>
-      <div class="brand__title">7-75th Ranger</div>
-      <div class="brand__sub">Regiment</div>
-    </div>
-  </a>
-
-  <nav class="nav">
-    <a href="forum.html">Forum</a>
-    <a href="about.html">About Us</a>
-    <a href="calendar.html">Calendar</a>
-    <div class="dropdown">
-      <button class="dropbtn" type="button">MILHQ ▾</button>
-      <div class="dropdown-menu">
-        <a href="roster.html">Roster</a>
-        <a href="ranks.html">Ranks</a>
-        <a href="awards.html">Awards</a>
+  <div class="topbar-inner">
+    <a class="brand" href="index.html" aria-label="Home">
+      <img class="brand-mark" src="logo.svg" alt="">
+      <div class="brand-stack">
+        <span class="brand-text">7-75th Ranger Regiment</span>
+        <span class="brand-sub">Realism Unit</span>
       </div>
-    </div>
-    <a class="nav__btn" href="login.html">Login</a>
-  </nav>
-</header>
+    </a>
 
-<main class="shell">
-  
-<aside class="sidebar">
-  <section class="sidecard">
-    <div class="sidecard__title">1 | FORT STEWART</div>
-    <a class="" href="index.html"><img src="icon_forum.png" alt="">Home</a>
-    <a class="" href="news.html"><img src="icon_forum.png" alt="">News</a>
-    <a class="" href="calendar.html"><img src="icon_calendar.png" alt="">Calendar</a>
-    <a class="" href="enlist.html"><img src="icon_training.png" alt="">Enlist</a>
-  </section>
+    <nav class="nav" aria-label="Primary">
+      <a class="" href="forum.html">Forum</a>
+      <a class="active" href="about.html">About Us</a>
+      <a class="" href="calendar.html">Calendar</a>
 
-  <section class="sidecard">
-    <div class="sidecard__title">2 | MILHQ</div>
-    <a class="" href="roster.html"><img src="icon_roster.png" alt="">Roster</a>
-    <a class="" href="awards.html"><img src="icon_awards.png" alt="">Awards</a>
-    <a class="active" href="ranks.html"><img src="icon_ranks.png" alt="">Ranks</a>
-  </section>
+      <div class="drop">
+        <button class="drop-btn" type="button" aria-haspopup="true" aria-expanded="false">
+          MILHQ <span class="chev">▾</span>
+        </button>
+        <div class="drop-menu" role="menu">
+          <a role="menuitem" href="roster.html">Roster</a>
+          <a role="menuitem" href="awards.html">Awards</a>
+          <a role="menuitem" href="ranks.html">Ranks</a>
+          <a role="menuitem" href="enlist.html" class="menu-highlight">Enlist</a>
+        </div>
+      </div>
 
-  <section class="sidecard">
-    <div class="sidecard__title">3 | UNIT RESOURCES</div>
-    <a class="" href="training.html"><img src="icon_training.png" alt="">Training & Schools</a>
-    <a class="" href="twitch.html"><img src="icon_twitch.png" alt="">Twitch</a>
-    <a class="" href="donations.html"><img src="icon_discord.png" alt="">Donations</a>
-    <a class="" href="forum.html"><img src="icon_forum.png" alt="">Forum</a>
-  </section>
-
-  <div class="sidepillrow">
-    <span class="pill">Time Zone: CST</span>
-    <span class="pill">TeamSpeak</span>
+      <a class="login-btn " href="login.html">Login</a>
+    </nav>
   </div>
-</aside>
-
-  <section class="content">
-    <section class="hero" style="--hero:url('hero_milhq.jpg')">
-      <div class="kicker">— Rangers Lead the Way —</div>
-      <h1>Rank Structure</h1>
-      <p>Promotion requirements and rank information.</p>
-      <div class="cta">
-        <a class="btn btn--primary" href="enlist.html">Enlist Today</a>
-        <a class="btn btn--ghost" href="about.html">Learn More</a>
-        <span class="tag">Arma</span>
-        <span class="tag">Realism</span>
-        <span class="tag">Training Pipeline</span>
-        <span class="tag">TeamSpeak + Discord</span>
+</header>
+<main class="shell shell--inner">
+  <div class="page-grid">
+    <aside class="sidebar">
+      <section class="sidecard"><div class="sidecard__title">1 | FORT STEWART</div><a class="" href="index.html"><img src="icon_forum.png" alt="">Home</a>
+<a class="" href="news.html"><img src="icon_forum.png" alt="">News</a>
+<a class="" href="calendar.html"><img src="icon_calendar.png" alt="">Calendar</a>
+<a class="" href="enlist.html"><img src="icon_roster.png" alt="">Enlist</a></section>
+      <section class="sidecard"><div class="sidecard__title">2 | MILHQ</div><a class="" href="roster.html"><img src="icon_roster.png" alt="">Roster</a>
+<a class="" href="awards.html"><img src="icon_awards.png" alt="">Awards</a>
+<a class="active" href="ranks.html"><img src="icon_ranks.png" alt="">Ranks</a></section>
+      <section class="sidecard"><div class="sidecard__title">3 | UNIT RESOURCES</div><a class="" href="donations.html"><img src="icon_discord.png" alt="">Donations</a>
+<a class="" href="twitch.html"><img src="icon_twitch.png" alt="">Twitch</a>
+<a class="" href="forum.html"><img src="icon_forum.png" alt="">Forum</a></section>
+      <div class="sidepillrow"><span class="pill">Time Zone: CST</span><span class="pill">TeamSpeak</span></div>
+    </aside>
+    <section class="content">
+      <section class="subhero" style="--hero:url('hero_milhq.jpg')">
+      <div class="subhero-shade"></div>
+      <div class="subhero-content">
+        <div class="kicker">— Rangers Lead the Way —</div>
+        <h1>Rank Structure</h1>
+        <p>Promotion requirements and rank information.</p>
+        <div class="cta">
+          <a class="btn btn--primary" href="enlist.html">Enlist Today</a>
+          <a class="btn btn--ghost" href="about.html">Learn More</a>
+          <span class="tag">Ranks</span><span class="tag">Promotion</span><span class="tag">Leadership</span>
+        </div>
       </div>
     </section>
-
-    
-<section class="panel">
-  <h2>Ranks</h2>
-  <p style="margin:0;color:var(--muted);font-weight:650">List E1–O6, requirements, and insignia images here.</p>
-</section>
-
-
-    
-<footer class="footer">
-  <div>© 7-75th Ranger Regiment • Hosted on GitHub Pages.</div>
-  <div class="footer__links">
-    <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Terms</a>
-    <a href="contact.html">Contact</a>
+      <div class="rank-page-controls"><button class="rank-page-btn active" data-rank-group="officer">1</button><button class="rank-page-btn" data-rank-group="enlisted">2</button><button class="rank-page-btn" data-rank-group="special">3</button></div><div id="officer" class="rank-group active"><section class="rank-card"><div class="rank-card-header">Colonel</div><div class="rank-card-body"><div class="rank-insignia-block"><div class="insignia-box">O6</div><div class="rank-code">O6 | COL</div></div><div class="rank-details"><h3>Description</h3><p>The Colonel commands the regiment and is the final authority on major decisions, standards, staffing, and operational direction.</p><h3>Prerequisites</h3><ul class="prereq-list"><li>Appointed as Regimental Commander.</li></ul></div></div></section><section class="rank-card"><div class="rank-card-header">Lieutenant Colonel</div><div class="rank-card-body"><div class="rank-insignia-block"><div class="insignia-box">O5</div><div class="rank-code">O5 | LTC</div></div><div class="rank-details"><h3>Description</h3><p>Lieutenant Colonels serve as battalion-level commanders or executive officers and help drive planning, resourcing, and overall readiness.</p><h3>Prerequisites</h3><ul class="prereq-list"><li>Six months time in grade as Major.</li><li>Appointed to battalion command or executive leadership.</li></ul></div></div></section><section class="rank-card"><div class="rank-card-header">Major</div><div class="rank-card-body"><div class="rank-insignia-block"><div class="insignia-box">O4</div><div class="rank-code">O4 | MAJ</div></div><div class="rank-details"><h3>Description</h3><p>Majors are field grade officers trusted with staff responsibilities, planning support, and executive leadership roles across the unit.</p><h3>Prerequisites</h3><ul class="prereq-list"><li>Demonstrated excellence as a commissioned officer.</li><li>Promotion approval by command staff.</li></ul></div></div></section><section class="rank-card"><div class="rank-card-header">Captain</div><div class="rank-card-body"><div class="rank-insignia-block"><div class="insignia-box">O3</div><div class="rank-code">O3 | CPT</div></div><div class="rank-details"><h3>Description</h3><p>Captains command companies, manage operations, and develop junior leaders while enforcing standards across their formation.</p><h3>Prerequisites</h3><ul class="prereq-list"><li>Successful platoon-level leadership.</li></ul></div></div></section></div><div id="enlisted" class="rank-group"><section class="rank-card"><div class="rank-card-header">Command Sergeant Major</div><div class="rank-card-body"><div class="rank-insignia-block"><div class="insignia-box">E9</div><div class="rank-code">E9 | CSM</div></div><div class="rank-details"><h3>Description</h3><p>The Command Sergeant Major advises the commander, enforces standards, and oversees enlisted development across the regiment.</p><h3>Prerequisites</h3><ul class="prereq-list"><li>Senior NCO experience and command approval.</li></ul></div></div></section><section class="rank-card"><div class="rank-card-header">First Sergeant</div><div class="rank-card-body"><div class="rank-insignia-block"><div class="insignia-box">E8</div><div class="rank-code">E8 | 1SG</div></div><div class="rank-details"><h3>Description</h3><p>First Sergeants are the senior enlisted leaders of company formations and are responsible for discipline, mentorship, and readiness.</p><h3>Prerequisites</h3><ul class="prereq-list"><li>Proven platoon-level leadership.</li></ul></div></div></section><section class="rank-card"><div class="rank-card-header">Sergeant First Class</div><div class="rank-card-body"><div class="rank-insignia-block"><div class="insignia-box">E7</div><div class="rank-code">E7 | SFC</div></div><div class="rank-details"><h3>Description</h3><p>Sergeant First Class personnel serve as platoon sergeants, senior staff NCOs, and section leaders.</p><h3>Prerequisites</h3><ul class="prereq-list"><li>Leadership course completion.</li></ul></div></div></section><section class="rank-card"><div class="rank-card-header">Staff Sergeant</div><div class="rank-card-body"><div class="rank-insignia-block"><div class="insignia-box">E6</div><div class="rank-code">E6 | SSG</div></div><div class="rank-details"><h3>Description</h3><p>Staff Sergeants lead squads, run training, and mentor junior enlisted Rangers.</p><h3>Prerequisites</h3><ul class="prereq-list"><li>Consistent squad-level leadership.</li></ul></div></div></section></div><div id="special" class="rank-group"><section class="rank-card"><div class="rank-card-header">Sergeant</div><div class="rank-card-body"><div class="rank-insignia-block"><div class="insignia-box">E5</div><div class="rank-code">E5 | SGT</div></div><div class="rank-details"><h3>Description</h3><p>Sergeants lead fire teams and assist with training execution and discipline at the lowest leadership level.</p><h3>Prerequisites</h3><ul class="prereq-list"><li>Recommended by chain of command.</li></ul></div></div></section><section class="rank-card"><div class="rank-card-header">Corporal / Specialist</div><div class="rank-card-body"><div class="rank-insignia-block"><div class="insignia-box">E4</div><div class="rank-code">E4 | CPL / SPC</div></div><div class="rank-details"><h3>Description</h3><p>Corporals and Specialists form the backbone of the unit and support team-level execution.</p><h3>Prerequisites</h3><ul class="prereq-list"><li>Demonstrated reliability and performance.</li></ul></div></div></section><section class="rank-card"><div class="rank-card-header">Private First Class / Private</div><div class="rank-card-body"><div class="rank-insignia-block"><div class="insignia-box">E3-E1</div><div class="rank-code">E3-E1 | PFC / PV2 / PVT</div></div><div class="rank-details"><h3>Description</h3><p>Junior enlisted Rangers develop their core skills, complete training, and integrate into the unit structure.</p><h3>Prerequisites</h3><ul class="prereq-list"><li>Successful enlistment and onboarding.</li></ul></div></div></section></div>
+      <footer class="footer footer--inner"><div>© 7-75th Ranger Regiment • Hosted on GitHub Pages.</div><div class="footer__links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a></div></footer>
+    </section>
   </div>
-</footer>
-
-  </section>
 </main>
 <script src="main.js" defer></script>
 </body>

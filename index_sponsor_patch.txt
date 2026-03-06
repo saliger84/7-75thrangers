@@ -1,2 +1,1 @@
-<!-- REPLACE JUST THE SPONSOR IMAGE LINE WITH THIS -->
-<img src="teamspeak_logo.png" alt="TeamSpeak" style="max-width:520px;width:100%;height:auto;opacity:.95">
+<img src="teamspeak_logo.png" alt="TeamSpeak" class="sponsor-logo">

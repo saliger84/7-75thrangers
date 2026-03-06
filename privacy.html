@@ -9,95 +9,69 @@
 <body>
 
 <header class="topbar">
-  <a class="brand" href="index.html">
-    <img src="logo.svg" alt="Logo" class="brand__logo">
-    <div>
-      <div class="brand__title">7-75th Ranger</div>
-      <div class="brand__sub">Regiment</div>
-    </div>
-  </a>
-
-  <nav class="nav">
-    <a href="forum.html">Forum</a>
-    <a href="about.html">About Us</a>
-    <a href="calendar.html">Calendar</a>
-    <div class="dropdown">
-      <button class="dropbtn" type="button">MILHQ ▾</button>
-      <div class="dropdown-menu">
-        <a href="roster.html">Roster</a>
-        <a href="ranks.html">Ranks</a>
-        <a href="awards.html">Awards</a>
+  <div class="topbar-inner">
+    <a class="brand" href="index.html" aria-label="Home">
+      <img class="brand-mark" src="logo.svg" alt="">
+      <div class="brand-stack">
+        <span class="brand-text">7-75th Ranger Regiment</span>
+        <span class="brand-sub">Realism Unit</span>
       </div>
-    </div>
-    <a class="nav__btn" href="login.html">Login</a>
-  </nav>
-</header>
+    </a>
 
-<main class="shell">
-  
-<aside class="sidebar">
-  <section class="sidecard">
-    <div class="sidecard__title">1 | FORT STEWART</div>
-    <a class="active" href="index.html"><img src="icon_forum.png" alt="">Home</a>
-    <a class="" href="news.html"><img src="icon_forum.png" alt="">News</a>
-    <a class="" href="calendar.html"><img src="icon_calendar.png" alt="">Calendar</a>
-    <a class="" href="enlist.html"><img src="icon_training.png" alt="">Enlist</a>
-  </section>
+    <nav class="nav" aria-label="Primary">
+      <a class="" href="forum.html">Forum</a>
+      <a class="active" href="about.html">About Us</a>
+      <a class="" href="calendar.html">Calendar</a>
 
-  <section class="sidecard">
-    <div class="sidecard__title">2 | MILHQ</div>
-    <a class="" href="roster.html"><img src="icon_roster.png" alt="">Roster</a>
-    <a class="" href="awards.html"><img src="icon_awards.png" alt="">Awards</a>
-    <a class="" href="ranks.html"><img src="icon_ranks.png" alt="">Ranks</a>
-  </section>
+      <div class="drop">
+        <button class="drop-btn" type="button" aria-haspopup="true" aria-expanded="false">
+          MILHQ <span class="chev">▾</span>
+        </button>
+        <div class="drop-menu" role="menu">
+          <a role="menuitem" href="roster.html">Roster</a>
+          <a role="menuitem" href="awards.html">Awards</a>
+          <a role="menuitem" href="ranks.html">Ranks</a>
+          <a role="menuitem" href="enlist.html" class="menu-highlight">Enlist</a>
+        </div>
+      </div>
 
-  <section class="sidecard">
-    <div class="sidecard__title">3 | UNIT RESOURCES</div>
-    <a class="" href="training.html"><img src="icon_training.png" alt="">Training & Schools</a>
-    <a class="" href="twitch.html"><img src="icon_twitch.png" alt="">Twitch</a>
-    <a class="" href="donations.html"><img src="icon_discord.png" alt="">Donations</a>
-    <a class="" href="forum.html"><img src="icon_forum.png" alt="">Forum</a>
-  </section>
-
-  <div class="sidepillrow">
-    <span class="pill">Time Zone: CST</span>
-    <span class="pill">TeamSpeak</span>
+      <a class="login-btn " href="login.html">Login</a>
+    </nav>
   </div>
-</aside>
-
-  <section class="content">
-    <section class="hero" style="--hero:url('hero_home.jpg')">
-      <div class="kicker">— Rangers Lead the Way —</div>
-      <h1>Privacy</h1>
-      <p>Privacy policy.</p>
-      <div class="cta">
-        <a class="btn btn--primary" href="enlist.html">Enlist Today</a>
-        <a class="btn btn--ghost" href="about.html">Learn More</a>
-        <span class="tag">Arma</span>
-        <span class="tag">Realism</span>
-        <span class="tag">Training Pipeline</span>
-        <span class="tag">TeamSpeak + Discord</span>
+</header>
+<main class="shell shell--inner">
+  <div class="page-grid">
+    <aside class="sidebar">
+      <section class="sidecard"><div class="sidecard__title">1 | FORT STEWART</div><a class="" href="index.html"><img src="icon_forum.png" alt="">Home</a>
+<a class="" href="news.html"><img src="icon_forum.png" alt="">News</a>
+<a class="" href="calendar.html"><img src="icon_calendar.png" alt="">Calendar</a>
+<a class="" href="enlist.html"><img src="icon_roster.png" alt="">Enlist</a></section>
+      <section class="sidecard"><div class="sidecard__title">2 | MILHQ</div><a class="" href="roster.html"><img src="icon_roster.png" alt="">Roster</a>
+<a class="" href="awards.html"><img src="icon_awards.png" alt="">Awards</a>
+<a class="" href="ranks.html"><img src="icon_ranks.png" alt="">Ranks</a></section>
+      <section class="sidecard"><div class="sidecard__title">3 | UNIT RESOURCES</div><a class="" href="donations.html"><img src="icon_discord.png" alt="">Donations</a>
+<a class="" href="twitch.html"><img src="icon_twitch.png" alt="">Twitch</a>
+<a class="" href="forum.html"><img src="icon_forum.png" alt="">Forum</a></section>
+      <div class="sidepillrow"><span class="pill">Time Zone: CST</span><span class="pill">TeamSpeak</span></div>
+    </aside>
+    <section class="content">
+      <section class="subhero" style="--hero:url('hero_about.jpg')">
+      <div class="subhero-shade"></div>
+      <div class="subhero-content">
+        <div class="kicker">— Rangers Lead the Way —</div>
+        <h1>Privacy</h1>
+        <p>Privacy policy.</p>
+        <div class="cta">
+          <a class="btn btn--primary" href="enlist.html">Enlist Today</a>
+          <a class="btn btn--ghost" href="about.html">Learn More</a>
+          <span class="tag">Policy</span>
+        </div>
       </div>
     </section>
-
-    
-<section class="panel">
-  <h2>Privacy</h2>
-  <p style="margin:0;color:var(--muted);font-weight:650">Add your privacy policy here.</p>
-</section>
-
-
-    
-<footer class="footer">
-  <div>© 7-75th Ranger Regiment • Hosted on GitHub Pages.</div>
-  <div class="footer__links">
-    <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Terms</a>
-    <a href="contact.html">Contact</a>
+      <section class="panel"><h2>Privacy Policy</h2><p>This placeholder page is ready for your privacy language. Replace the text here with how your site handles visitor information, Discord usernames, application data, or any submitted forms.</p></section>
+      <footer class="footer footer--inner"><div>© 7-75th Ranger Regiment • Hosted on GitHub Pages.</div><div class="footer__links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a></div></footer>
+    </section>
   </div>
-</footer>
-
-  </section>
 </main>
 <script src="main.js" defer></script>
 </body>
