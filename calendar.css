@@ -1,0 +1,152 @@
+/* Calendar page only */
+.calendar-shell{
+  max-width:1300px;
+}
+
+.calendar-wrap{
+  background:rgba(35,39,45,.95);
+  border:1px solid rgba(255,255,255,.05);
+  box-shadow:0 24px 60px rgba(0,0,0,.35);
+  padding:16px;
+}
+
+.calendar-toolbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:12px;
+}
+.calendar-filter,
+.calendar-view{
+  height:38px;
+  display:inline-flex;
+  align-items:center;
+  border:1px solid rgba(255,255,255,.08);
+  background:rgba(48,52,60,.95);
+  color:#8cb0d3;
+  padding:0 14px;
+  font-size:14px;
+  font-weight:500;
+}
+.calendar-filter{
+  border-radius:4px;
+  cursor:pointer;
+}
+.calendar-filter span{margin-left:8px;color:rgba(255,255,255,.65)}
+.calendar-view{
+  background:transparent;
+  border-color:transparent;
+  color:rgba(255,255,255,.92);
+  padding-right:0;
+}
+
+.calendar-monthbar{
+  height:40px;
+  display:grid;
+  grid-template-columns:40px 1fr 40px;
+  align-items:center;
+  background:#4b4f68;
+  color:#fff;
+}
+.month-title{
+  text-align:center;
+  font-size:16px;
+  font-weight:500;
+}
+.month-arrow{
+  height:40px;
+  border:0;
+  background:transparent;
+  color:#fff;
+  font-size:22px;
+  cursor:pointer;
+}
+
+.calendar-grid{
+  display:grid;
+  grid-template-columns:repeat(7, 1fr);
+  border-left:1px solid rgba(255,255,255,.08);
+  border-top:1px solid rgba(255,255,255,.08);
+}
+
+.weekday{
+  height:34px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#373b44;
+  color:rgba(255,255,255,.72);
+  font-size:11px;
+  font-weight:700;
+  border-right:1px solid rgba(255,255,255,.08);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.day{
+  min-height:103px;
+  padding:10px 8px 8px;
+  background:#3b3f45;
+  border-right:1px solid rgba(255,255,255,.08);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  position:relative;
+}
+.date{
+  text-align:center;
+  font-size:12px;
+  font-weight:600;
+  color:rgba(255,255,255,.88);
+  margin-bottom:10px;
+}
+.current-date{
+  width:19px;
+  height:19px;
+  line-height:19px;
+  margin:0 auto 10px;
+  border-radius:999px;
+  background:#4b7da8;
+  color:#fff;
+  font-size:11px;
+}
+
+.event{
+  position:relative;
+  padding-left:12px;
+  margin:8px 0;
+  font-size:11px;
+  line-height:1.25;
+  color:rgba(255,255,255,.84);
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.event::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:4px;
+  width:6px;
+  height:6px;
+  border-radius:999px;
+  background:#bbb;
+}
+.event.gold::before{background:#e2c24f}
+.event.green::before{background:#69c573}
+.event.red::before{background:#ff6a5c}
+.event.blue::before{background:#2f7dff}
+.event.purple::before{background:#9c4cff}
+
+.calendar-powered{
+  text-align:center;
+  color:rgba(255,255,255,.78);
+  font-size:10px;
+  margin-top:26px;
+}
+
+@media (max-width: 1100px){
+  .calendar-grid{
+    grid-template-columns:repeat(1, 1fr);
+  }
+  .weekday{display:none}
+  .day{min-height:auto}
+  .calendar-toolbar{flex-direction:column;align-items:flex-start;gap:10px}
+}
