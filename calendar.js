@@ -50,6 +50,7 @@ function formatKey(date) {
 }
 
 function renderCalendar(date) {
+  calendarGrid.style.opacity = 0;
   monthLabel.textContent = date.toLocaleString('en-US', { month: 'long', year: 'numeric' });
 
   calendarGrid.querySelectorAll('.day').forEach(el => el.remove());
@@ -67,7 +68,9 @@ function renderCalendar(date) {
     const key = formatKey(dayDate);
     const items = events[key] || [];
     const outside = dayDate.getMonth() !== month;
-    const isTodayBubble = key === '2026-03-06';
+    const today = new Date();
+    const todayKey = formatKey(today);
+    const isTodayBubble = key === todayKey;
 
     const cell = document.createElement('div');
     cell.className = `day${outside ? ' outside' : ''}${isTodayBubble ? ' today' : ''}`;
@@ -94,6 +97,10 @@ function renderCalendar(date) {
     cell.appendChild(list);
     calendarGrid.appendChild(cell);
   }
+
+  setTimeout(() => {
+    calendarGrid.style.opacity = 1;
+  }, 80);
 }
 
 prevMonth.addEventListener('click', () => {
