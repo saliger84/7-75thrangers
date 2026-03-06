@@ -54,4 +54,38 @@ async function loadForumNews() {
 
 document.addEventListener('DOMContentLoaded', () => {
   loadForumNews();
+
+  // MILHQ dropdown
+  const drops = document.querySelectorAll('[data-drop]');
+
+  drops.forEach(drop => {
+    const btn = drop.querySelector('[data-dropbtn]');
+    if (!btn) return;
+
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const isOpen = drop.classList.contains('open');
+
+      drops.forEach(d => {
+        d.classList.remove('open');
+        const otherBtn = d.querySelector('[data-dropbtn]');
+        if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+      });
+
+      if (!isOpen) {
+        drop.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  document.addEventListener('click', () => {
+    drops.forEach(d => {
+      d.classList.remove('open');
+      const btn = d.querySelector('[data-dropbtn]');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+    });
+  });
 });
