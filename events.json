@@ -1,0 +1,219 @@
+{
+  "2026-02-26": [
+    {
+      "time": "16:59",
+      "title": "Platoon Report Due Date",
+      "color": "purple",
+      "category": "report",
+      "location": "MILHQ",
+      "leader": "Platoon Leadership",
+      "notes": "All platoon reports must be submitted before cutoff."
+    }
+  ],
+  "2026-02-28": [
+    {
+      "time": "09:00",
+      "title": "Promotion Board",
+      "color": "yellow",
+      "category": "meeting",
+      "location": "Unit HQ",
+      "leader": "CSM Staff",
+      "notes": "Candidates report 15 minutes early in proper uniform."
+    },
+    {
+      "time": "14:00",
+      "title": "Squad Drills",
+      "color": "green",
+      "category": "training",
+      "location": "Training Server",
+      "leader": "SSG Walker",
+      "notes": "Bring radios, maps, and standard training loadout."
+    }
+  ],
+  "2026-03-01": [
+    {
+      "time": "14:00",
+      "title": "Field Training Exercise (FTX)",
+      "color": "red",
+      "category": "operations",
+      "location": "Operations Server",
+      "leader": "1LT Mason",
+      "notes": "Full combat kit required. Step-off at 1400 sharp."
+    }
+  ],
+  "2026-03-07": [
+    {
+      "time": "14:00",
+      "title": "Squad Drills",
+      "color": "green",
+      "category": "training",
+      "location": "Training Server",
+      "leader": "SSG Walker",
+      "notes": "Focus on bounding, movement, and room clearing."
+    }
+  ],
+  "2026-03-08": [
+    {
+      "time": "10:00",
+      "title": "FG Q2 Meeting",
+      "color": "yellow",
+      "category": "meeting",
+      "location": "MILHQ",
+      "leader": "Field Grade Staff",
+      "notes": "Quarterly planning and staffing review."
+    },
+    {
+      "time": "12:00",
+      "title": "Unit Award Ceremony",
+      "color": "blue",
+      "category": "ceremony",
+      "location": "Parade Deck",
+      "leader": "Regimental Staff",
+      "notes": "Formal attendance expected in ceremony uniform."
+    },
+    {
+      "time": "14:00",
+      "title": "Field Training Exercise (FTX)",
+      "color": "red",
+      "category": "operations",
+      "location": "Operations Server",
+      "leader": "CPT Hall",
+      "notes": "Company-level mission rehearsal."
+    }
+  ],
+  "2026-03-14": [
+    {
+      "time": "10:00",
+      "title": "Warrior Leadership Course 26-01",
+      "color": "yellow",
+      "category": "meeting",
+      "location": "Classroom Server",
+      "leader": "NCO Academy",
+      "notes": "Leadership candidates only."
+    },
+    {
+      "time": "14:00",
+      "title": "Squad Drills",
+      "color": "green",
+      "category": "training",
+      "location": "Training Server",
+      "leader": "SSG Walker",
+      "notes": "Weapons handling and team movement refreshers."
+    }
+  ],
+  "2026-03-15": [
+    {
+      "time": "14:00",
+      "title": "Field Training Exercise (FTX)",
+      "color": "red",
+      "category": "operations",
+      "location": "Operations Server",
+      "leader": "1LT Mason",
+      "notes": "Live mission lane and after-action review."
+    }
+  ],
+  "2026-03-21": [
+    {
+      "time": "12:00",
+      "title": "NCO Meeting",
+      "color": "yellow",
+      "category": "meeting",
+      "location": "MILHQ",
+      "leader": "1SG Team",
+      "notes": "Section readiness and leadership updates."
+    },
+    {
+      "time": "14:00",
+      "title": "Squad Drills",
+      "color": "green",
+      "category": "training",
+      "location": "Training Server",
+      "leader": "SSG Walker",
+      "notes": "Battle drill repetitions and communications checks."
+    }
+  ],
+  "2026-03-22": [
+    {
+      "time": "14:00",
+      "title": "Field Training Exercise (FTX)",
+      "color": "red",
+      "category": "operations",
+      "location": "Operations Server",
+      "leader": "CPT Hall",
+      "notes": "Platoon-level operation with dedicated briefing."
+    }
+  ],
+  "2026-03-26": [
+    {
+      "time": "17:59",
+      "title": "Platoon Report Due Date",
+      "color": "purple",
+      "category": "report",
+      "location": "MILHQ",
+      "leader": "Platoon Leadership",
+      "notes": "Upload reports before 1759."
+    }
+  ],
+  "2026-03-28": [
+    {
+      "time": "10:00",
+      "title": "Promotion Board",
+      "color": "yellow",
+      "category": "meeting",
+      "location": "Unit HQ",
+      "leader": "CSM Staff",
+      "notes": "Prepare all personnel packets in advance."
+    },
+    {
+      "time": "14:00",
+      "title": "Squad Drills",
+      "color": "green",
+      "category": "training",
+      "location": "Training Server",
+      "leader": "SSG Walker",
+      "notes": "Final validation for next operations cycle."
+    }
+  ],
+  "2026-03-29": [
+    {
+      "time": "14:00",
+      "title": "Field Training Exercise (FTX)",
+      "color": "red",
+      "category": "operations",
+      "location": "Operations Server",
+      "leader": "1LT Mason",
+      "notes": "March capstone field exercise."
+    }
+  ],
+  "2026-04-04": [
+    {
+      "time": "14:00",
+      "title": "Squad Drills",
+      "color": "green",
+      "category": "training",
+      "location": "Training Server",
+      "leader": "SSG Walker",
+      "notes": "April training kickoff."
+    }
+  ],
+  "2026-04-05": [
+    {
+      "time": "12:00",
+      "title": "Unit Award Ceremony",
+      "color": "blue",
+      "category": "ceremony",
+      "location": "Parade Deck",
+      "leader": "Regimental Staff",
+      "notes": "Recognition ceremony for March commendations."
+    },
+    {
+      "time": "14:00",
+      "title": "Field Training Exercise (FTX)",
+      "color": "red",
+      "category": "operations",
+      "location": "Operations Server",
+      "leader": "CPT Hall",
+      "notes": "April operations cycle begins."
+    }
+  ]
+}
