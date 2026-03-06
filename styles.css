@@ -463,3 +463,68 @@ body::before{
   .feature3{grid-template-columns:1fr}
   .sponsor-logo{width: 640px; max-width: 95vw;} /* keep perceived size; still capped */
 }
+/* ===== 3rdID-style BIG feature tiles ===== */
+.feature3{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:22px;
+  margin-top: 16px;
+}
+
+.featureCard.big{
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.06), rgba(0,0,0,.12)),
+    url("texture_hex.png"); /* optional: if you have it */
+  background-size: auto, 320px 320px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:4px;
+  min-height: 230px;
+  padding: 22px 22px 18px;
+  text-align:center;
+  box-shadow: 0 10px 25px rgba(0,0,0,.35);
+}
+
+.featureCard.big h3{
+  margin: 14px 0 10px;
+  font-size: 28px;
+  letter-spacing: .04em;
+  font-weight: 300; /* thin like 3rdID */
+  text-transform: uppercase;
+}
+
+.featureCard.big p{
+  margin: 0 auto 10px;
+  max-width: 520px;
+  font-size: 11px;
+  line-height: 1.55;
+  color: rgba(255,255,255,.75);
+}
+
+.featureBadge{
+  width: 54px;
+  height: 54px;
+  margin: 0 auto;
+  display:grid;
+  place-items:center;
+}
+
+.featureBadge img{
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+}
+
+/* ===== Make Latest News + YouTube EXACT 3rdID proportions ===== */
+.twoCol{
+  display:grid;
+  grid-template-columns: 520px 1fr;  /* 3rdID look */
+  gap:22px;
+  margin-top:20px;
+  align-items:stretch;
+}
+
+.newsBox,
+.videoBox{
+  height: 420px;                     /* both SAME height */
+  background:#1b1f24;
+  border:1px solid rgba(255,255,255,.08
